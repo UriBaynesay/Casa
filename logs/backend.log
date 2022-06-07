@@ -1862,3 +1862,34 @@
 7.6.2022, 16:49:39 - INFO - New connected socket [id: kma8yuZ2sItu2lPFAAAB] 
 7.6.2022, 16:49:43 - INFO - Server is running on port: 3030 
 7.6.2022, 16:49:44 - INFO - New connected socket [id: _eeWN-PAheP67PvzAAAB] 
+7.6.2022, 16:56:20 - INFO - Server is running on port: 3030 
+7.6.2022, 16:56:25 - INFO - New connected socket [id: tkKw3VluLMqF7pBmAAAB] 
+7.6.2022, 16:58:54 - INFO - Server is running on port: 3030 
+7.6.2022, 16:58:56 - INFO - New connected socket [id: A-9edOHHQzvU2ioBAAAB] 
+7.6.2022, 16:59:30 - INFO - Socket disconnected [id: undefined] 
+7.6.2022, 17:12:05 - INFO - Server is running on port: 3030 
+7.6.2022, 17:13:49 - DEBUG - auth.service - login with username: 75091963 
+7.6.2022, 17:14:00 - INFO - User login:  | {"_id":"622f3401e36c59e6164fab4d","fullname":"Edgar","imgUrl":"https://a0.muscache.com/im/pictures/d17abb7c-beb0-4dbe-976e-fc633de18b4b.jpg?aki_policy=profile_small","username":"75091963","id":"75091963"} 
+7.6.2022, 17:15:11 - INFO - Server is running on port: 3030 
+7.6.2022, 17:16:37 - DEBUG - auth.service - signup with username: uri, fullname: Uri Baynesay 
+7.6.2022, 17:16:39 - DEBUG - auth.route - new account created: {"_id":"629f5dc7976e8d0fa47f7367","username":"uri","password":"1234","fullname":"Uri Baynesay","createdAt":1654611399494} 
+7.6.2022, 17:16:39 - DEBUG - auth.service - login with username: uri 
+7.6.2022, 17:16:39 - INFO - User signup: | {"_id":"629f5dc7976e8d0fa47f7367","username":"uri","fullname":"Uri Baynesay","imgUrl":null,"createdAt":1654611399494} 
+7.6.2022, 17:17:34 - DEBUG - auth.service - signup with username: uri, fullname: Uri Baynesay 
+7.6.2022, 17:17:34 - ERROR - Failed to signup Username already taken 
+7.6.2022, 17:18:02 - DEBUG - auth.service - login with username: uri 
+7.6.2022, 17:18:03 - INFO - User login:  | {"_id":"629f5dc7976e8d0fa47f7367","username":"uri","fullname":"Uri Baynesay","imgUrl":null,"createdAt":1654611399494} 
+7.6.2022, 17:30:54 - DEBUG - auth.service - login with username: 36133410 
+7.6.2022, 17:30:54 - INFO - User login:  | {"_id":"622f3403e36c59e6164faf93","fullname":"Patty And Beckett","imgUrl":"https://a0.muscache.com/im/pictures/542dba0c-eb1b-4ab3-85f3-94d3cc8f87a4.jpg?aki_policy=profile_small","username":"36133410","id":"36133410"} 
+7.6.2022, 17:32:26 - DEBUG - auth.service - login with username: 36133410 
+7.6.2022, 17:32:26 - INFO - User login:  | {"_id":"622f3403e36c59e6164faf93","fullname":"Patty And Beckett","imgUrl":"https://a0.muscache.com/im/pictures/542dba0c-eb1b-4ab3-85f3-94d3cc8f87a4.jpg?aki_policy=profile_small","username":"36133410","id":"36133410"} 
+7.6.2022, 17:35:43 - INFO - Server is running on port: 3030 
+7.6.2022, 17:35:46 - INFO - Server is running on port: 3030 
+7.6.2022, 17:35:49 - INFO - Server is running on port: 3030 
+7.6.2022, 17:35:53 - INFO - Server is running on port: 3030 
+7.6.2022, 17:36:01 - INFO - Server is running on port: 3030 
+7.6.2022, 17:36:09 - INFO - Server is running on port: 3030 
+7.6.2022, 17:36:39 - INFO - Server is running on port: 3030 
+7.6.2022, 17:36:42 - INFO - Server is running on port: 3030 
+7.6.2022, 17:36:45 - INFO - Server is running on port: 3030 
+7.6.2022, 17:37:21 - INFO - Server is running on port: 3030 

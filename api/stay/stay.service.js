@@ -32,7 +32,7 @@ async function remove(stayId, loggedInUser) {
     const collection = await dbService.getCollection("stay_db")
     const criteria = { _id: stayId }
     if (!loggedInUser.isAdmin) criteria["host._id"] = loggedInUser._id
-    const { deletedCount } = await collection.deleteOne({ criteria })
+    const { deletedCount } = await collection.deleteOne( criteria )
     return deletedCount
   } catch (err) {
     logger.error(`cannot remove review ${stayId}`, err)
