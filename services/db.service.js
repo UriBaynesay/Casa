@@ -7,7 +7,7 @@ module.exports = {
 }
 
 // Database Name
-const dbName = 'casa_db'
+const dbName = 'airbnb-final-project'
 
 var dbConn = null
 

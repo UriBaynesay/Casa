@@ -1,57 +1,57 @@
-const userService = require('./user.service')
-const socketService = require('../../services/socket.service')
-const logger = require('../../services/logger.service')
-const authService=require('../auth/auth.service')
+const userService = require("./user.service")
+const socketService = require("../../services/socket.service")
+const logger = require("../../services/logger.service")
+const authService = require("../auth/auth.service")
 
 async function getUser(req, res) {
-    try {
-        const user = await userService.getById(req.params.userId)
-        res.json(user)
-    } catch (err) {
-        logger.error('Failed to get user', err)
-        res.status(500).send({ err: 'Failed to get user' })
-    }
+  try {
+    const user = await userService.getById(req.params.userId)
+    res.json(user)
+  } catch (err) {
+    logger.error("Failed to get user", err)
+    res.status(500).send({ err: "Failed to get user" })
+  }
 }
 
 async function getUsers(req, res) {
-    try {
-        const users = await userService.query()
-        res.json(users)
-    } catch (err) {
-        logger.error('Failed to get users', err)
-        res.status(500).send({ err: 'Failed to get users' })
-    }
+  try {
+    const users = await userService.query()
+    res.json(users)
+  } catch (err) {
+    logger.error("Failed to get users", err)
+    res.status(500).send({ err: "Failed to get users" })
+  }
 }
 
 async function deleteUser(req, res) {
-    try {
-        await userService.remove(req.params.userId)
-        res.send({ msg: 'Deleted successfully' })
-    } catch (err) {
-        logger.error('Failed to delete user', err)
-        res.status(500).send({ err: 'Failed to delete user' })
-    }
+  try {
+    await userService.remove(req.params.userId)
+    res.send({ msg: "Deleted successfully" })
+  } catch (err) {
+    logger.error("Failed to delete user", err)
+    res.status(500).send({ err: "Failed to delete user" })
+  }
 }
 
 async function updateUser(req, res) {
-    var loggedinUser = authService.validateToken(req.cookies.loginToken)
+  var loggedinUser = authService.validateToken(req.cookies.loginToken)
 
-    try {
-        const user = req.body
-        if(loggedinUser._id!==user._id) {
-           return res.status(500).send({ err: 'Failed to update user' })
-        }
-        const savedUser = await userService.update(user)
-        res.send(savedUser)
-    } catch (err) {
-        logger.error('Failed to update user', err)
-        res.status(500).send({ err: 'Failed to update user' })
+  try {
+    const user = req.body
+    if (loggedinUser._id !== user._id) {
+      return res.status(500).send({ err: "Failed to update user" })
     }
+    const savedUser = await userService.update(user)
+    res.send(savedUser)
+  } catch (err) {
+    logger.error("Failed to update user", err)
+    res.status(500).send({ err: "Failed to update user" })
+  }
 }
 
 module.exports = {
-    getUser,
-    getUsers,
-    deleteUser,
-    updateUser
+  getUser,
+  getUsers,
+  deleteUser,
+  updateUser,
 }
