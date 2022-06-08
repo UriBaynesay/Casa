@@ -120,6 +120,9 @@ function _buildCriteria(filterBy) {
   if (filterBy.hostId) {
     criteria.$and.push({ "host._id": filterBy.hostId })
   }
+  if (filterBy.guestCount) {
+    criteria.$and.push({ "capacity": {$lte:+filterBy.guestCount} })
+  }
   return criteria
 }
 
