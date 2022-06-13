@@ -6,14 +6,14 @@ const asyncLocalStorage = require("../../services/als.service")
 async function query(filterBy = {}) {
   try {
     const criteria = _buildCriteria(filterBy)
-    const collection = await dbService.getCollection("order")
+    const collection = await dbService.getCollection("order_db")
     let orders = await collection
       .aggregate([
         { $match: criteria },
         {
           $lookup: {
             localField: "stayId",
-            from: "stay",
+            from: "stay_db",
             foreignField: "_id",
             as: "stay",
           },
@@ -24,21 +24,21 @@ async function query(filterBy = {}) {
         {
           $lookup: {
             localField: "userId",
-            from: "user",
+            from: "user_db",
             foreignField: "_id",
-            as: "user",
+            as: "byUser",
           },
         },
         {
-          $unwind: "$user",
+          $unwind: "$byUser",
         },
       ])
       .toArray()
     orders = orders.map((order) => {
-      order.user = {
-        _id: order.user._id,
-        fullname: order.user.fullname,
-        imgUrl: order.user.imgUrl,
+      order.byUser = {
+        _id: order.byUser._id,
+        fullname: order.byUser.fullname,
+        imgUrl: order.byUser.imgUrl,
       }
       delete order.userId
       delete order.stayId
@@ -54,7 +54,7 @@ async function query(filterBy = {}) {
 
 async function getById(orderId) {
   try {
-    const collection = await dbService.getCollection("order")
+    const collection = await dbService.getCollection("order_db")
     const order = await collection.findOne({ _id: ObjectId(orderId) })
     return order
   } catch (err) {
@@ -65,8 +65,7 @@ async function getById(orderId) {
 
 async function remove(orderId,loggedInUser) {
   try {
-    const collection = await dbService.getCollection("order")
-    // remove only if user is owner/admin
+    const collection = await dbService.getCollection("order_db")
     const criteria = { _id: ObjectId(orderId) }
     criteria.userId = ObjectId(loggedInUser._id)
     const { deletedCount } = await collection.deleteOne(criteria)
@@ -82,12 +81,14 @@ async function add(order) {
     const orderToAdd = {
       startDate: order.startDate,
       endDate: order.endDate,
-      userId: ObjectId(order.byUserId),
-      stayId: ObjectId(order.stayId),
+      userId: order.byUserId,
+      stayId: order.stayId,
       hostId: order.hostId,
+      price:order.price,
+      guestCount:order.guestCount,
       status: "pending",
     }
-    const collection = await dbService.getCollection("order")
+    const collection = await dbService.getCollection("order_db")
     await collection.insertOne(orderToAdd)
     return orderToAdd
   } catch (err) {
@@ -96,19 +97,20 @@ async function add(order) {
   }
 }
 
-async function update(order) {
+async function update(order,loggedInUser) {
   try {
+    if(loggedInUser!==order.userId&&loggedInUser!==order.hostId) throw('not auth to update')
     const orderToSave = {
             _id: ObjectId(order._id), 
             status: order.status,
             startDate: order.startDate,
             endDate: order.endDate,
         }
-    const collection = await dbService.getCollection("order")
+    const collection = await dbService.getCollection("order_db")
     await collection.updateOne({ _id: ObjectId(order._id) }, { $set: { ...orderToSave } })
     return order
   } catch (err) {
-    logger.error(`cannot update order ${orderId}`, err)
+    logger.error(`cannot update order ${order._id}`, err)
     throw err
   }
 }
@@ -120,10 +122,10 @@ function _buildCriteria(filterBy) {
     criteria.hostId =filterBy.hostId
   }
   if (filterBy.userId) {
-    criteria.userId = ObjectId(filterBy.userId)
+    criteria.userId = filterBy.userId
   }
   if (filterBy.stayId) {
-    criteria.stayId = ObjectId(filterBy.stayId)
+    criteria.stayId = filterBy.stayId
   }
   return criteria
 }

@@ -1,5 +1,4 @@
 const logger = require("../../services/logger.service")
-const userService = require("../user/user.service")
 const authService = require("../auth/auth.service")
 const socketService = require("../../services/socket.service")
 const orderService = require("./order.service")
@@ -14,7 +13,6 @@ async function getOrders(req, res) {
   }
 }
 
-// GET BY ID
 async function getOrderById(req, res) {
   try {
     const { orderId } = req.params
@@ -46,7 +44,6 @@ async function addOrder(req, res) {
   try {
     var order = req.body
     const bookedDates = await _getBookedDates(order.stayId)
-    console.log(bookedDates);
     const isAvailble = await _checkAvailability(order.startDate,order.endDate,bookedDates)
     order.byUserId = loggedInUser._id
     order = await orderService.add(order)
@@ -80,11 +77,11 @@ async function addOrder(req, res) {
   }
 }
 
-// Update stay
 async function updateOrder(req, res) {
+  var loggedInUser = authService.validateToken(req.cookies.loginToken)
   try {
     const order = req.body
-    const updatedOrder = await orderService.update(order)
+    const updatedOrder = await orderService.update(order,loggedInUser)
     res.json(updatedOrder)
   } catch (err) {
     logger.error("Failed to update order", err)
