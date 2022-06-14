@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.d997d43b.css",
-    "main.js": "/static/js/main.f3f0fd7d.js",
+    "main.css": "/static/css/main.375c2849.css",
+    "main.js": "/static/js/main.82ccf11a.js",
     "static/media/rio.jpg": "/static/media/rio.e2ccddce24aefcde6f5c.jpg",
     "static/media/newyork.jpg": "/static/media/newyork.171741f188f0321b5191.jpg",
     "static/media/001.jpeg": "/static/media/001.903cf23418501c9e4d2d.jpeg",
@@ -111,7 +111,6 @@
     "static/media/100.jpeg": "/static/media/100.0dabeb2bc474f6213da9.jpeg",
     "static/media/101.jpeg": "/static/media/101.e56efaa2f264d7283861.jpeg",
     "static/media/102.jpeg": "/static/media/102.3e7f6bd022a8594f3b31.jpeg",
-    "static/media/airbnb-privacy.jpeg": "/static/media/airbnb-privacy.d98f0f9e6340386f023a.jpeg",
     "static/media/103.jpeg": "/static/media/103.d1940e527237261d1445.jpeg",
     "static/media/104.jpeg": "/static/media/104.766143e72d7a86702521.jpeg",
     "static/media/105.jpeg": "/static/media/105.3e9d894563501e61e78f.jpeg",
@@ -192,11 +191,11 @@
     "static/media/new-logo.svg": "/static/media/new-logo.19fabe897506c35552d649e31b9ebc4c.svg",
     "index.html": "/index.html",
     "static/media/star.svg": "/static/media/star.523d9e205c20990b0c1b62dddc8cee4b.svg",
-    "main.d997d43b.css.map": "/static/css/main.d997d43b.css.map",
-    "main.f3f0fd7d.js.map": "/static/js/main.f3f0fd7d.js.map"
+    "main.375c2849.css.map": "/static/css/main.375c2849.css.map",
+    "main.82ccf11a.js.map": "/static/js/main.82ccf11a.js.map"
   },
   "entrypoints": [
-    "static/css/main.d997d43b.css",
-    "static/js/main.f3f0fd7d.js"
+    "static/css/main.375c2849.css",
+    "static/js/main.82ccf11a.js"
   ]
 }
