@@ -27,7 +27,10 @@ async function getOrderById(req, res) {
 async function deleteOrder(req, res) {
   var loggedInUser = authService.validateToken(req.cookies.loginToken)
   try {
-    const deletedCount = await orderService.remove(req.params.orderId,loggedInUser)
+    const deletedCount = await orderService.remove(
+      req.params.orderId,
+      loggedInUser
+    )
     if (deletedCount === 1) {
       res.send({ msg: "Deleted successfully" })
     } else {
@@ -44,30 +47,15 @@ async function addOrder(req, res) {
   try {
     var order = req.body
     const bookedDates = await _getBookedDates(order.stayId)
-    const isAvailble = await _checkAvailability(order.startDate,order.endDate,bookedDates)
+    await _checkAvailability(order.startDate, order.endDate, bookedDates)
     order.byUserId = loggedInUser._id
     order = await orderService.add(order)
 
-    // // prepare the updated review for sending out
-    // review.aboutUser = await userService.getById(review.aboutUserId)
-
-    // // Give the user credit for adding a review
-    // // var user = await userService.getById(review.byUserId)
-    // // user.score += 10
-    // loggedinUser.score += 10
-
-    // loggedinUser = await userService.update(loggedinUser)
-    // review.byUser = loggedinUser
-
-    // // User info is saved also in the login-token, update it
-    // const loginToken = authService.getLoginToken(loggedinUser)
-    // res.cookie('loginToken', loginToken)
-
-    // socketService.broadcast({type: 'review-added', data: review, userId: review.byUserId})
-    socketService.emitToUser({type: 'new-order', data: order, userId: order.hostId})
-
-    // const fullUser = await userService.getById(loggedinUser._id)
-    // socketService.emitTo({type: 'user-updated', data: fullUser, label: fullUser._id})
+    socketService.emitToUser({
+      type: "new-order",
+      data: order,
+      userId: order.hostId,
+    })
 
     res.json(order)
   } catch (err) {
@@ -81,7 +69,20 @@ async function updateOrder(req, res) {
   var loggedInUser = authService.validateToken(req.cookies.loginToken)
   try {
     const order = req.body
-    const updatedOrder = await orderService.update(order,loggedInUser)
+    const updatedOrder = await orderService.update(order, loggedInUser)
+
+    socketService.emitToUser({
+      type: "updated-order",
+      data: order,
+      userId: order.byUser._id,
+    })
+
+    socketService.emitToUser({
+      type: "updated-order",
+      data: order,
+      userId: order.stay.host._id,
+    })
+
     res.json(updatedOrder)
   } catch (err) {
     logger.error("Failed to update order", err)

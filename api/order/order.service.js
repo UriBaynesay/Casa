@@ -63,7 +63,7 @@ async function getById(orderId) {
   }
 }
 
-async function remove(orderId,loggedInUser) {
+async function remove(orderId, loggedInUser) {
   try {
     const collection = await dbService.getCollection("order_db")
     const criteria = { _id: ObjectId(orderId) }
@@ -84,8 +84,8 @@ async function add(order) {
       userId: order.byUserId,
       stayId: order.stayId,
       hostId: order.hostId,
-      price:order.price,
-      guestCount:order.guestCount,
+      price: order.price,
+      guestCount: order.guestCount,
       status: "pending",
     }
     const collection = await dbService.getCollection("order_db")
@@ -97,17 +97,21 @@ async function add(order) {
   }
 }
 
-async function update(order,loggedInUser) {
+async function update(order, loggedInUser) {
   try {
-    if(loggedInUser!==order.userId&&loggedInUser!==order.hostId) throw('not auth to update')
+    if (loggedInUser._id !== order.byUser._id && loggedInUser._id !== order.stay.host._id)
+      throw "not auth to update"
     const orderToSave = {
-            _id: ObjectId(order._id), 
-            status: order.status,
-            startDate: order.startDate,
-            endDate: order.endDate,
-        }
+      _id: ObjectId(order._id),
+      status: order.status,
+      startDate: order.startDate,
+      endDate: order.endDate,
+    }
     const collection = await dbService.getCollection("order_db")
-    await collection.updateOne({ _id: ObjectId(order._id) }, { $set: { ...orderToSave } })
+    await collection.updateOne(
+      { _id: ObjectId(order._id) },
+      { $set: { ...orderToSave } }
+    )
     return order
   } catch (err) {
     logger.error(`cannot update order ${order._id}`, err)
@@ -116,10 +120,10 @@ async function update(order,loggedInUser) {
 }
 
 function _buildCriteria(filterBy) {
-  console.log(filterBy);
+  console.log(filterBy)
   const criteria = {}
   if (filterBy.hostId) {
-    criteria.hostId =filterBy.hostId
+    criteria.hostId = filterBy.hostId
   }
   if (filterBy.userId) {
     criteria.userId = filterBy.userId
