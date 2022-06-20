@@ -5189,3 +5189,11 @@
 20.6.2022, 16:28:27 - INFO - Emiting event: updated-order to user: 622f3404e36c59e6164fb63a socket [id: MHKmoy2CkpMu5JZdAABP] 
 20.6.2022, 16:28:35 - INFO - Removing socket.userId for socket [id: MHKmoy2CkpMu5JZdAABP] 
 20.6.2022, 16:28:35 - INFO - Setting socket.userId = 622f3404e36c59e6164fb63a for socket [id: MHKmoy2CkpMu5JZdAABP] 
+20.6.2022, 16:37:10 - INFO - Server is running on port: 3030 
+20.6.2022, 16:37:10 - INFO - New connected socket [id: trFGeSb_xZ5Spt-iAAAB] 
+20.6.2022, 16:37:37 - INFO - New connected socket [id: mP8B8uV9MOEpCS13AAAD] 
+20.6.2022, 16:38:10 - DEBUG - auth.service - login with username: 35858044 
+20.6.2022, 16:38:10 - INFO - User login:  | {"_id":"622f3404e36c59e6164fb63a","fullname":"Isabel","imgUrl":"https://a0.muscache.com/im/pictures/72a579ce-37d7-466e-9c25-9876ee8de037.jpg?aki_policy=profile_small","username":"35858044","id":"35858044"} 
+20.6.2022, 16:38:10 - INFO - Setting socket.userId = 622f3404e36c59e6164fb63a for socket [id: mP8B8uV9MOEpCS13AAAD] 
+20.6.2022, 16:38:11 - INFO - Setting socket.userId = 622f3404e36c59e6164fb63a for socket [id: mP8B8uV9MOEpCS13AAAD] 
+20.6.2022, 16:38:11 - INFO - Setting socket.userId = 622f3404e36c59e6164fb63a for socket [id: mP8B8uV9MOEpCS13AAAD] 
