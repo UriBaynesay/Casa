@@ -5383,3 +5383,22 @@
 28.6.2022, 9:46:58 - INFO - New connected socket [id: 5T-FFrNCh7-G-8__AAAB] 
 28.6.2022, 9:46:59 - INFO - Server is running on port: 3030 
 28.6.2022, 9:47:00 - INFO - New connected socket [id: F87rZWy9c70yA7IBAAAB] 
+28.6.2022, 10:08:29 - INFO - Server is running on port: 3030 
+28.6.2022, 10:08:29 - INFO - New connected socket [id: rTcXKsTtASicUmQmAAAB] 
+28.6.2022, 10:09:03 - INFO - Socket disconnected [id: undefined] 
+28.6.2022, 10:09:26 - INFO - New connected socket [id: LqliPbIJ3quDNWLYAAAD] 
+28.6.2022, 10:09:44 - INFO - Socket disconnected [id: undefined] 
+28.6.2022, 10:09:45 - INFO - New connected socket [id: odw2BcNO_16z9vYZAAAF] 
+28.6.2022, 10:09:53 - INFO - Socket disconnected [id: undefined] 
+28.6.2022, 10:09:54 - INFO - New connected socket [id: VWBwa93i4c-2leBtAAAH] 
+28.6.2022, 10:10:20 - DEBUG - auth.service - login with username: 75091963 
+28.6.2022, 10:10:20 - INFO - User login:  | {"_id":"622f3401e36c59e6164fab4d","fullname":"Edgar","imgUrl":"https://xsgames.co/randomusers/assets/avatars/female/48.jpg","username":"75091963"} 
+28.6.2022, 10:10:20 - INFO - Setting socket.userId = 622f3401e36c59e6164fab4d for socket [id: VWBwa93i4c-2leBtAAAH] 
+28.6.2022, 10:10:25 - INFO - Setting socket.userId = 622f3401e36c59e6164fab4d for socket [id: VWBwa93i4c-2leBtAAAH] 
+28.6.2022, 10:10:25 - INFO - Setting socket.userId = 622f3401e36c59e6164fab4d for socket [id: VWBwa93i4c-2leBtAAAH] 
+28.6.2022, 10:10:26 - INFO - Setting socket.userId = 622f3401e36c59e6164fab4d for socket [id: VWBwa93i4c-2leBtAAAH] 
+28.6.2022, 10:10:27 - INFO - Setting socket.userId = 622f3401e36c59e6164fab4d for socket [id: VWBwa93i4c-2leBtAAAH] 
+28.6.2022, 10:10:28 - INFO - Setting socket.userId = 622f3401e36c59e6164fab4d for socket [id: VWBwa93i4c-2leBtAAAH] 
+28.6.2022, 10:10:28 - INFO - Setting socket.userId = 622f3401e36c59e6164fab4d for socket [id: VWBwa93i4c-2leBtAAAH] 
+28.6.2022, 10:10:29 - INFO - Removing socket.userId for socket [id: VWBwa93i4c-2leBtAAAH] 
+28.6.2022, 10:10:29 - INFO - Setting socket.userId = 622f3401e36c59e6164fab4d for socket [id: VWBwa93i4c-2leBtAAAH] 
