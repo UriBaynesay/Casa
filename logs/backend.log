@@ -5402,3 +5402,11 @@
 28.6.2022, 10:10:28 - INFO - Setting socket.userId = 622f3401e36c59e6164fab4d for socket [id: VWBwa93i4c-2leBtAAAH] 
 28.6.2022, 10:10:29 - INFO - Removing socket.userId for socket [id: VWBwa93i4c-2leBtAAAH] 
 28.6.2022, 10:10:29 - INFO - Setting socket.userId = 622f3401e36c59e6164fab4d for socket [id: VWBwa93i4c-2leBtAAAH] 
+4.7.2022, 15:25:16 - INFO - Server is running on port: 3030 
+4.7.2022, 15:25:53 - INFO - New connected socket [id: OMEqGqiqmwFkv9xKAAAB] 
+4.7.2022, 15:55:32 - INFO - Socket disconnected [id: undefined] 
+4.7.2022, 15:55:34 - INFO - New connected socket [id: FUCsJv--NFQJvzHLAAAD] 
+4.7.2022, 15:55:40 - INFO - Socket disconnected [id: undefined] 
+4.7.2022, 15:55:41 - INFO - New connected socket [id: ljc328IAqGYopiScAAAF] 
+4.7.2022, 15:55:56 - INFO - Socket disconnected [id: undefined] 
+4.7.2022, 15:56:03 - INFO - New connected socket [id: j7Z0Zf6DwCtaHm-zAAAH] 

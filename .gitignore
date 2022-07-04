@@ -2,3 +2,5 @@ node_modules
 .vscode
 logs/backend.log
 config/dev.js
+logs
+.gitignore
