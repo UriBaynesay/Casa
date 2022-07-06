@@ -8,9 +8,9 @@ async function login(username, password) {
   logger.debug(`auth.service - login with username: ${username}`)
 
   const user = await userService.getByUsername(username)
-  if (!user) return Promise.reject("Invalid username or password")
+  if (!user) return Promise.reject("Invalid Username or Password")
   if (user.password !== password)
-    return Promise.reject("Invalid username or password")
+    return Promise.reject("Invalid Username or Password")
 
   // encrypted password
   // const match = await bcrypt.compare(password, user.password)

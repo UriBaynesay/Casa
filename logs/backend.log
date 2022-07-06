@@ -5632,3 +5632,29 @@
 6.7.2022, 18:05:29 - INFO - New connected socket [id: i3kZKzs3hQSMgWXRAAAP] 
 6.7.2022, 18:06:14 - INFO - Socket disconnected [id: undefined] 
 6.7.2022, 18:07:11 - INFO - Server is running on port: 3030 
+6.7.2022, 18:08:10 - INFO - New connected socket [id: 2iBh9Drzza00ag8-AAAB] 
+6.7.2022, 18:08:10 - INFO - Socket disconnected [id: undefined] 
+6.7.2022, 18:08:13 - INFO - New connected socket [id: whS22UqzuRaOHA4YAAAD] 
+6.7.2022, 18:08:40 - INFO - Socket disconnected [id: undefined] 
+6.7.2022, 18:08:43 - INFO - New connected socket [id: I7E_IZ9kh3HHkxQrAAAF] 
+6.7.2022, 18:09:12 - DEBUG - auth.service - login with username: uri552@gmail.com 
+6.7.2022, 18:09:12 - ERROR - Failed to Login Invalid username or password 
+6.7.2022, 18:09:57 - INFO - Socket disconnected [id: undefined] 
+6.7.2022, 18:10:53 - INFO - Server is running on port: 3030 
+6.7.2022, 18:11:35 - INFO - New connected socket [id: G8nwDPYDQGswG6ZZAAAB] 
+6.7.2022, 18:11:52 - DEBUG - auth.service - login with username: uri552@gmail.com 
+6.7.2022, 18:11:52 - ERROR - Failed to Login Invalid username or password 
+6.7.2022, 18:12:20 - INFO - Socket disconnected [id: undefined] 
+6.7.2022, 18:12:31 - INFO - New connected socket [id: KKvw1WunesFMtuF3AAAD] 
+6.7.2022, 18:13:29 - INFO - Socket disconnected [id: undefined] 
+6.7.2022, 18:13:31 - INFO - New connected socket [id: JF3c_4AVM6JPq82CAAAF] 
+6.7.2022, 18:13:50 - INFO - Socket disconnected [id: undefined] 
+6.7.2022, 18:13:52 - INFO - New connected socket [id: rWgewTYQFBamAyWpAAAH] 
+6.7.2022, 18:14:12 - DEBUG - auth.service - login with username: uri552@gmail.com 
+6.7.2022, 18:14:12 - ERROR - Failed to Login Invalid username or password 
+6.7.2022, 18:15:06 - INFO - Server is running on port: 3030 
+6.7.2022, 18:15:06 - INFO - New connected socket [id: a4cK151nPXnZsU9tAAAB] 
+6.7.2022, 18:15:11 - INFO - Server is running on port: 3030 
+6.7.2022, 18:15:13 - INFO - New connected socket [id: pCRk2N3m-C2EtebpAAAB] 
+6.7.2022, 18:15:20 - INFO - Server is running on port: 3030 
+6.7.2022, 18:15:21 - INFO - New connected socket [id: ofNskZuPA7g5hA_uAAAB] 
