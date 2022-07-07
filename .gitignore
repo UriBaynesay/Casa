@@ -1,6 +1,5 @@
 node_modules
 .vscode
-logs/backend.log
-config/dev.js
+config
 logs
 .gitignore

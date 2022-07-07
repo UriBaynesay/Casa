@@ -2,7 +2,6 @@ const dbService = require("../../services/db.service")
 const logger = require("../../services/logger.service")
 const ObjectId = require("mongodb").ObjectId
 
-
 async function query(filterBy = {}) {
   try {
     const criteria = _buildCriteria(filterBy)
@@ -99,7 +98,10 @@ async function add(order) {
 
 async function update(order, loggedInUser) {
   try {
-    if (loggedInUser._id !== order.byUser._id && loggedInUser._id !== order.stay.host._id)
+    if (
+      loggedInUser._id !== order.byUser._id &&
+      loggedInUser._id !== order.stay.host._id
+    )
       throw "not auth to update"
     const orderToSave = {
       _id: ObjectId(order._id),

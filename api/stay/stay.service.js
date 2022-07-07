@@ -18,9 +18,10 @@ async function getById(stayId) {
   try {
     const collection = await dbService.getCollection("stay_db")
     const stay = await collection.findOne({ _id: stayId })
-    return stay
+    if (stay) return stay
+    throw `Stay ${stayId} was not found` 
   } catch (err) {
-    logger.error(`while finding stay ${stayId}`, err)
+    logger.error('While finding stay ', err)
     throw err
   }
 }
@@ -30,7 +31,7 @@ async function remove(stayId, loggedInUser) {
     const collection = await dbService.getCollection("stay_db")
     const criteria = { _id: stayId }
     if (!loggedInUser.isAdmin) criteria["host._id"] = loggedInUser._id
-    const { deletedCount } = await collection.deleteOne( criteria )
+    const { deletedCount } = await collection.deleteOne(criteria)
     return deletedCount
   } catch (err) {
     logger.error(`cannot remove review ${stayId}`, err)
@@ -41,7 +42,7 @@ async function remove(stayId, loggedInUser) {
 async function add(stay) {
   try {
     const stayToAdd = {
-      _id:ObjectId().toString(),
+      _id: ObjectId().toString(),
       name: stay.name,
       summary: stay.summary,
       houseRules: stay.houseRules,
@@ -80,12 +81,9 @@ async function add(stay) {
 async function update(stay) {
   try {
     const collection = await dbService.getCollection("stay_db")
-    const updatedStay = {...stay}
+    const updatedStay = { ...stay }
     delete updatedStay._id
-    await collection.updateOne(
-      { _id: stay._id },
-      { $set: updatedStay }
-    )
+    await collection.updateOne({ _id: stay._id }, { $set: updatedStay })
     return stay
   } catch (err) {
     logger.error(`cannot update stay ${stay._id}`, err)
@@ -119,7 +117,7 @@ function _buildCriteria(filterBy) {
     criteria.$and.push({ "host._id": filterBy.hostId })
   }
   if (filterBy.guestCount) {
-    criteria.$and.push({ "capacity": {$gte:+filterBy.guestCount} })
+    criteria.$and.push({ capacity: { $gte: +filterBy.guestCount } })
   }
   return criteria
 }

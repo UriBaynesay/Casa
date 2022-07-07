@@ -59,9 +59,8 @@ async function addOrder(req, res) {
 
     res.json(order)
   } catch (err) {
-    console.log(err)
     logger.error("Failed to add order", err)
-    res.status(500).send({ err: "Failed to add order" })
+    res.status(500).send(err)
   }
 }
 
@@ -86,7 +85,7 @@ async function updateOrder(req, res) {
     res.json(updatedOrder)
   } catch (err) {
     logger.error("Failed to update order", err)
-    res.status(500).send({ err: "Failed to update order" })
+    res.status(500).send(err)
   }
 }
 
