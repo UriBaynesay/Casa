@@ -6036,3 +6036,16 @@
 10.7.2022, 14:44:16 - INFO - New connected socket [id: Qg_K4BKUzpdZ9yzAAAAx] 
 10.7.2022, 14:45:44 - INFO - Socket disconnected [id: undefined] 
 10.7.2022, 14:46:05 - INFO - New connected socket [id: -YUbimyyBKtWsz0aAAAz] 
+11.7.2022, 16:56:59 - INFO - Server is running on port: 3030 
+11.7.2022, 17:15:32 - INFO - New connected socket [id: zA30es4nIalPytWfAAAB] 
+11.7.2022, 17:16:07 - INFO - Socket disconnected [id: undefined] 
+11.7.2022, 17:33:43 - INFO - Server is running on port: 3030 
+11.7.2022, 17:38:55 - INFO - New connected socket [id: ffVVtXn_D1BKDr6nAAAB] 
+11.7.2022, 17:39:42 - DEBUG - auth.service - login with username: 75091963 
+11.7.2022, 17:39:42 - INFO - User login:  | {"_id":"622f3401e36c59e6164fab4d","fullname":"Edgar","imgUrl":"https://xsgames.co/randomusers/assets/avatars/female/48.jpg","username":"75091963"} 
+11.7.2022, 17:39:42 - INFO - Setting socket.userId = 622f3401e36c59e6164fab4d for socket [id: ffVVtXn_D1BKDr6nAAAB] 
+11.7.2022, 17:39:42 - INFO - Setting socket.userId = 622f3401e36c59e6164fab4d for socket [id: ffVVtXn_D1BKDr6nAAAB] 
+11.7.2022, 17:39:46 - INFO - Setting socket.userId = 622f3401e36c59e6164fab4d for socket [id: ffVVtXn_D1BKDr6nAAAB] 
+11.7.2022, 17:39:46 - INFO - Setting socket.userId = 622f3401e36c59e6164fab4d for socket [id: ffVVtXn_D1BKDr6nAAAB] 
+11.7.2022, 17:39:47 - INFO - Removing socket.userId for socket [id: ffVVtXn_D1BKDr6nAAAB] 
+11.7.2022, 17:39:47 - INFO - Setting socket.userId = 622f3401e36c59e6164fab4d for socket [id: ffVVtXn_D1BKDr6nAAAB] 
