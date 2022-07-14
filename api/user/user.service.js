@@ -18,7 +18,6 @@ async function query(filterBy = {}) {
     var users = await collection.find(filterBy).toArray()
     users = users.map((user) => {
       delete user.password
-      //   user.createdAt = ObjectId(user._id).getTimestamp()
       return user
     })
     return users
