@@ -6165,3 +6165,149 @@
 19.7.2022, 16:00:35 - INFO - New connected socket [id: ieEk3mFfNqpZL8-GAAAP] 
 19.7.2022, 16:00:39 - INFO - New connected socket [id: SlD2D9ZDAydJA-OAAAAR] 
 19.7.2022, 16:00:41 - INFO - New connected socket [id: 7ib1qvSww95EcNyIAAAT] 
+20.7.2022, 14:32:44 - INFO - Server is running on port: 3030 
+20.7.2022, 14:34:20 - INFO - New connected socket [id: xEJpQussGDgrjBLOAAAB] 
+20.7.2022, 14:39:06 - INFO - Socket disconnected [id: undefined] 
+20.7.2022, 14:39:07 - INFO - New connected socket [id: 5B1gCEJJyMf8Wj8wAAAD] 
+20.7.2022, 14:44:34 - INFO - Socket disconnected [id: undefined] 
+20.7.2022, 14:50:07 - INFO - New connected socket [id: XMostghEtbuwZ-l-AAAF] 
+20.7.2022, 14:50:08 - INFO - New connected socket [id: Ql4ozopmox8snTjKAAAH] 
+20.7.2022, 14:51:07 - DEBUG - auth.service - login with username: 35858044 
+20.7.2022, 14:51:07 - INFO - User login:  | {"_id":"622f3404e36c59e6164fb63a","fullname":"Isabel","imgUrl":"https://xsgames.co/randomusers/assets/avatars/male/43.jpg","username":"35858044"} 
+20.7.2022, 14:51:07 - INFO - Setting socket.userId = 622f3404e36c59e6164fb63a for socket [id: XMostghEtbuwZ-l-AAAF] 
+20.7.2022, 14:51:07 - INFO - Setting socket.userId = 622f3404e36c59e6164fb63a for socket [id: XMostghEtbuwZ-l-AAAF] 
+20.7.2022, 14:52:00 - DEBUG - auth.service - login with username: 75091963 
+20.7.2022, 14:52:00 - INFO - User login:  | {"_id":"622f3401e36c59e6164fab4d","fullname":"Edgar","imgUrl":"https://xsgames.co/randomusers/assets/avatars/female/48.jpg","username":"75091963"} 
+20.7.2022, 14:52:00 - INFO - Setting socket.userId = 622f3401e36c59e6164fab4d for socket [id: Ql4ozopmox8snTjKAAAH] 
+20.7.2022, 14:52:00 - INFO - Setting socket.userId = 622f3401e36c59e6164fab4d for socket [id: Ql4ozopmox8snTjKAAAH] 
+20.7.2022, 14:52:04 - INFO - Setting socket.userId = 622f3401e36c59e6164fab4d for socket [id: Ql4ozopmox8snTjKAAAH] 
+20.7.2022, 14:52:12 - INFO - Socket disconnected [id: undefined] 
+20.7.2022, 14:52:13 - INFO - New connected socket [id: T1P4ciDd9MpXJygYAAAJ] 
+20.7.2022, 14:52:14 - INFO - Setting socket.userId = 622f3401e36c59e6164fab4d for socket [id: T1P4ciDd9MpXJygYAAAJ] 
+20.7.2022, 14:52:14 - INFO - Setting socket.userId = 622f3401e36c59e6164fab4d for socket [id: T1P4ciDd9MpXJygYAAAJ] 
+20.7.2022, 14:52:14 - INFO - Setting socket.userId = 622f3401e36c59e6164fab4d for socket [id: T1P4ciDd9MpXJygYAAAJ] 
+20.7.2022, 14:52:25 - INFO - Socket disconnected [id: undefined] 
+20.7.2022, 14:52:26 - INFO - New connected socket [id: UmR7_WJmt_3Kk11-AAAL] 
+20.7.2022, 14:52:26 - INFO - Setting socket.userId = 622f3401e36c59e6164fab4d for socket [id: UmR7_WJmt_3Kk11-AAAL] 
+20.7.2022, 14:52:26 - INFO - Setting socket.userId = 622f3401e36c59e6164fab4d for socket [id: UmR7_WJmt_3Kk11-AAAL] 
+20.7.2022, 14:52:26 - INFO - Setting socket.userId = 622f3401e36c59e6164fab4d for socket [id: UmR7_WJmt_3Kk11-AAAL] 
+20.7.2022, 14:52:38 - INFO - Emiting event: new-order to user: 622f3404e36c59e6164fb63a socket [id: XMostghEtbuwZ-l-AAAF] 
+20.7.2022, 14:52:38 - INFO - Setting socket.userId = 622f3404e36c59e6164fb63a for socket [id: XMostghEtbuwZ-l-AAAF] 
+20.7.2022, 14:52:43 - INFO - Setting socket.userId = 622f3404e36c59e6164fb63a for socket [id: XMostghEtbuwZ-l-AAAF] 
+20.7.2022, 14:52:43 - INFO - Setting socket.userId = 622f3404e36c59e6164fb63a for socket [id: XMostghEtbuwZ-l-AAAF] 
+20.7.2022, 14:56:02 - INFO - Setting socket.userId = 622f3404e36c59e6164fb63a for socket [id: XMostghEtbuwZ-l-AAAF] 
+20.7.2022, 14:56:11 - INFO - Setting socket.userId = 622f3404e36c59e6164fb63a for socket [id: XMostghEtbuwZ-l-AAAF] 
+20.7.2022, 14:56:15 - INFO - Setting socket.userId = 622f3404e36c59e6164fb63a for socket [id: XMostghEtbuwZ-l-AAAF] 
+20.7.2022, 14:56:15 - INFO - Setting socket.userId = 622f3404e36c59e6164fb63a for socket [id: XMostghEtbuwZ-l-AAAF] 
+20.7.2022, 14:56:18 - INFO - Setting socket.userId = 622f3404e36c59e6164fb63a for socket [id: XMostghEtbuwZ-l-AAAF] 
+20.7.2022, 14:56:21 - INFO - Setting socket.userId = 622f3404e36c59e6164fb63a for socket [id: XMostghEtbuwZ-l-AAAF] 
+20.7.2022, 14:56:29 - INFO - Setting socket.userId = 622f3404e36c59e6164fb63a for socket [id: XMostghEtbuwZ-l-AAAF] 
+20.7.2022, 14:56:33 - INFO - Setting socket.userId = 622f3404e36c59e6164fb63a for socket [id: XMostghEtbuwZ-l-AAAF] 
+20.7.2022, 14:56:43 - INFO - Setting socket.userId = 622f3404e36c59e6164fb63a for socket [id: XMostghEtbuwZ-l-AAAF] 
+20.7.2022, 14:56:47 - INFO - Setting socket.userId = 622f3404e36c59e6164fb63a for socket [id: XMostghEtbuwZ-l-AAAF] 
+20.7.2022, 14:56:48 - INFO - Setting socket.userId = 622f3404e36c59e6164fb63a for socket [id: XMostghEtbuwZ-l-AAAF] 
+20.7.2022, 14:56:50 - INFO - Setting socket.userId = 622f3404e36c59e6164fb63a for socket [id: XMostghEtbuwZ-l-AAAF] 
+20.7.2022, 14:57:25 - INFO - Setting socket.userId = 622f3404e36c59e6164fb63a for socket [id: XMostghEtbuwZ-l-AAAF] 
+20.7.2022, 14:58:19 - INFO - Setting socket.userId = 622f3404e36c59e6164fb63a for socket [id: XMostghEtbuwZ-l-AAAF] 
+20.7.2022, 14:58:21 - ERROR - cannot update order 62ab2289100e022ac4264e55 | not auth to update 
+20.7.2022, 14:58:21 - ERROR - Failed to update order | not auth to update 
+20.7.2022, 14:58:28 - INFO - Socket disconnected [id: undefined] 
+20.7.2022, 14:58:29 - INFO - New connected socket [id: e46EH8Xjo7TCgKd3AAAN] 
+20.7.2022, 14:58:29 - INFO - Setting socket.userId = 622f3404e36c59e6164fb63a for socket [id: e46EH8Xjo7TCgKd3AAAN] 
+20.7.2022, 14:58:29 - INFO - Setting socket.userId = 622f3404e36c59e6164fb63a for socket [id: e46EH8Xjo7TCgKd3AAAN] 
+20.7.2022, 14:58:29 - INFO - Setting socket.userId = 622f3404e36c59e6164fb63a for socket [id: e46EH8Xjo7TCgKd3AAAN] 
+20.7.2022, 14:58:29 - INFO - Setting socket.userId = 622f3404e36c59e6164fb63a for socket [id: e46EH8Xjo7TCgKd3AAAN] 
+20.7.2022, 14:58:32 - ERROR - cannot update order 62ab2289100e022ac4264e55 | not auth to update 
+20.7.2022, 14:58:32 - ERROR - Failed to update order | not auth to update 
+20.7.2022, 14:58:38 - ERROR - cannot update order 62ab2289100e022ac4264e55 | not auth to update 
+20.7.2022, 14:58:38 - ERROR - Failed to update order | not auth to update 
+20.7.2022, 14:59:00 - INFO - Socket disconnected [id: undefined] 
+20.7.2022, 14:59:01 - INFO - Socket disconnected [id: undefined] 
+20.7.2022, 14:59:02 - INFO - New connected socket [id: 24P_d8XO1BZIG5L2AAAP] 
+20.7.2022, 14:59:02 - INFO - Setting socket.userId = 622f3404e36c59e6164fb63a for socket [id: 24P_d8XO1BZIG5L2AAAP] 
+20.7.2022, 14:59:02 - INFO - Setting socket.userId = 622f3404e36c59e6164fb63a for socket [id: 24P_d8XO1BZIG5L2AAAP] 
+20.7.2022, 14:59:02 - INFO - Setting socket.userId = 622f3404e36c59e6164fb63a for socket [id: 24P_d8XO1BZIG5L2AAAP] 
+20.7.2022, 14:59:03 - INFO - Setting socket.userId = 622f3404e36c59e6164fb63a for socket [id: 24P_d8XO1BZIG5L2AAAP] 
+20.7.2022, 14:59:06 - ERROR - cannot update order 62ab2289100e022ac4264e55 | not auth to update 
+20.7.2022, 14:59:06 - ERROR - Failed to update order | not auth to update 
+20.7.2022, 14:59:24 - INFO - Removing socket.userId for socket [id: 24P_d8XO1BZIG5L2AAAP] 
+20.7.2022, 14:59:24 - INFO - Setting socket.userId = 622f3404e36c59e6164fb63a for socket [id: 24P_d8XO1BZIG5L2AAAP] 
+20.7.2022, 14:59:34 - DEBUG - auth.service - login with username: 35858044 
+20.7.2022, 14:59:35 - INFO - User login:  | {"_id":"622f3404e36c59e6164fb63a","fullname":"Isabel","imgUrl":"https://xsgames.co/randomusers/assets/avatars/male/43.jpg","username":"35858044"} 
+20.7.2022, 14:59:35 - INFO - Setting socket.userId = 622f3404e36c59e6164fb63a for socket [id: 24P_d8XO1BZIG5L2AAAP] 
+20.7.2022, 14:59:35 - INFO - Setting socket.userId = 622f3404e36c59e6164fb63a for socket [id: 24P_d8XO1BZIG5L2AAAP] 
+20.7.2022, 14:59:35 - INFO - Setting socket.userId = 622f3404e36c59e6164fb63a for socket [id: 24P_d8XO1BZIG5L2AAAP] 
+20.7.2022, 14:59:35 - INFO - Setting socket.userId = 622f3404e36c59e6164fb63a for socket [id: 24P_d8XO1BZIG5L2AAAP] 
+20.7.2022, 14:59:39 - INFO - No active socket for user: 622f3403e36c59e6164fb005 
+20.7.2022, 14:59:39 - INFO - Emiting event: updated-order to user: 622f3404e36c59e6164fb63a socket [id: 24P_d8XO1BZIG5L2AAAP] 
+20.7.2022, 15:00:12 - INFO - Socket disconnected [id: undefined] 
+20.7.2022, 15:00:53 - INFO - New connected socket [id: TNBich_TklS5CsZLAAAR] 
+20.7.2022, 15:00:56 - INFO - No active socket for user: 622f3403e36c59e6164fb005 
+20.7.2022, 15:00:56 - INFO - No active socket for user: 622f3404e36c59e6164fb63a 
+20.7.2022, 15:01:04 - INFO - Socket disconnected [id: undefined] 
+20.7.2022, 15:01:06 - INFO - New connected socket [id: ZNVqa7HvU7oO5tjTAAAT] 
+20.7.2022, 15:01:06 - INFO - Setting socket.userId = 622f3404e36c59e6164fb63a for socket [id: ZNVqa7HvU7oO5tjTAAAT] 
+20.7.2022, 15:01:06 - INFO - Setting socket.userId = 622f3404e36c59e6164fb63a for socket [id: ZNVqa7HvU7oO5tjTAAAT] 
+20.7.2022, 15:01:06 - INFO - Setting socket.userId = 622f3404e36c59e6164fb63a for socket [id: ZNVqa7HvU7oO5tjTAAAT] 
+20.7.2022, 15:01:06 - INFO - Setting socket.userId = 622f3404e36c59e6164fb63a for socket [id: ZNVqa7HvU7oO5tjTAAAT] 
+20.7.2022, 15:01:11 - INFO - Socket disconnected [id: undefined] 
+20.7.2022, 15:01:12 - INFO - New connected socket [id: e3v-16__TJTOnDbQAAAV] 
+20.7.2022, 15:01:13 - INFO - Setting socket.userId = 622f3404e36c59e6164fb63a for socket [id: e3v-16__TJTOnDbQAAAV] 
+20.7.2022, 15:01:13 - INFO - Setting socket.userId = 622f3404e36c59e6164fb63a for socket [id: e3v-16__TJTOnDbQAAAV] 
+20.7.2022, 15:01:13 - INFO - Setting socket.userId = 622f3404e36c59e6164fb63a for socket [id: e3v-16__TJTOnDbQAAAV] 
+20.7.2022, 15:01:13 - INFO - Setting socket.userId = 622f3404e36c59e6164fb63a for socket [id: e3v-16__TJTOnDbQAAAV] 
+20.7.2022, 15:01:34 - INFO - No active socket for user: 622f3403e36c59e6164fb005 
+20.7.2022, 15:01:34 - INFO - Emiting event: updated-order to user: 622f3404e36c59e6164fb63a socket [id: e3v-16__TJTOnDbQAAAV] 
+20.7.2022, 15:01:40 - INFO - No active socket for user: 622f3403e36c59e6164fb005 
+20.7.2022, 15:01:40 - INFO - Emiting event: updated-order to user: 622f3404e36c59e6164fb63a socket [id: e3v-16__TJTOnDbQAAAV] 
+20.7.2022, 15:01:53 - INFO - No active socket for user: 622f3403e36c59e6164fb005 
+20.7.2022, 15:01:53 - INFO - Emiting event: updated-order to user: 622f3404e36c59e6164fb63a socket [id: e3v-16__TJTOnDbQAAAV] 
+20.7.2022, 15:01:56 - INFO - No active socket for user: 622f3403e36c59e6164fb005 
+20.7.2022, 15:01:56 - INFO - Emiting event: updated-order to user: 622f3404e36c59e6164fb63a socket [id: e3v-16__TJTOnDbQAAAV] 
+20.7.2022, 15:01:59 - INFO - No active socket for user: 622f3403e36c59e6164fb005 
+20.7.2022, 15:01:59 - INFO - Emiting event: updated-order to user: 622f3404e36c59e6164fb63a socket [id: e3v-16__TJTOnDbQAAAV] 
+20.7.2022, 15:02:04 - INFO - No active socket for user: 622f3403e36c59e6164fb005 
+20.7.2022, 15:02:04 - INFO - Emiting event: updated-order to user: 622f3404e36c59e6164fb63a socket [id: e3v-16__TJTOnDbQAAAV] 
+20.7.2022, 15:02:07 - INFO - No active socket for user: 622f3403e36c59e6164fb005 
+20.7.2022, 15:02:07 - INFO - Emiting event: updated-order to user: 622f3404e36c59e6164fb63a socket [id: e3v-16__TJTOnDbQAAAV] 
+20.7.2022, 15:02:09 - INFO - No active socket for user: 622f3403e36c59e6164fb005 
+20.7.2022, 15:02:09 - INFO - Emiting event: updated-order to user: 622f3404e36c59e6164fb63a socket [id: e3v-16__TJTOnDbQAAAV] 
+20.7.2022, 15:02:12 - INFO - No active socket for user: 622f3403e36c59e6164fb005 
+20.7.2022, 15:02:12 - INFO - Emiting event: updated-order to user: 622f3404e36c59e6164fb63a socket [id: e3v-16__TJTOnDbQAAAV] 
+20.7.2022, 15:02:15 - INFO - No active socket for user: 622f3403e36c59e6164fb005 
+20.7.2022, 15:02:15 - INFO - Emiting event: updated-order to user: 622f3404e36c59e6164fb63a socket [id: e3v-16__TJTOnDbQAAAV] 
+20.7.2022, 15:02:28 - INFO - No active socket for user: 622f3403e36c59e6164fb005 
+20.7.2022, 15:02:28 - INFO - Emiting event: updated-order to user: 622f3404e36c59e6164fb63a socket [id: e3v-16__TJTOnDbQAAAV] 
+20.7.2022, 15:04:28 - INFO - No active socket for user: 622f3403e36c59e6164fb005 
+20.7.2022, 15:04:28 - INFO - Emiting event: updated-order to user: 622f3404e36c59e6164fb63a socket [id: e3v-16__TJTOnDbQAAAV] 
+20.7.2022, 15:04:32 - INFO - No active socket for user: 622f3403e36c59e6164fb005 
+20.7.2022, 15:04:32 - INFO - Emiting event: updated-order to user: 622f3404e36c59e6164fb63a socket [id: e3v-16__TJTOnDbQAAAV] 
+20.7.2022, 15:04:34 - INFO - No active socket for user: 622f3403e36c59e6164fb005 
+20.7.2022, 15:04:34 - INFO - Emiting event: updated-order to user: 622f3404e36c59e6164fb63a socket [id: e3v-16__TJTOnDbQAAAV] 
+20.7.2022, 15:04:37 - INFO - No active socket for user: 622f3403e36c59e6164fb005 
+20.7.2022, 15:04:37 - INFO - Emiting event: updated-order to user: 622f3404e36c59e6164fb63a socket [id: e3v-16__TJTOnDbQAAAV] 
+20.7.2022, 15:04:50 - INFO - No active socket for user: 622f3403e36c59e6164fb005 
+20.7.2022, 15:04:50 - INFO - Emiting event: updated-order to user: 622f3404e36c59e6164fb63a socket [id: e3v-16__TJTOnDbQAAAV] 
+20.7.2022, 15:07:56 - INFO - Setting socket.userId = 622f3404e36c59e6164fb63a for socket [id: e3v-16__TJTOnDbQAAAV] 
+20.7.2022, 15:07:58 - INFO - No active socket for user: 622f3403e36c59e6164fb005 
+20.7.2022, 15:07:58 - INFO - Emiting event: updated-order to user: 622f3404e36c59e6164fb63a socket [id: e3v-16__TJTOnDbQAAAV] 
+20.7.2022, 15:08:00 - INFO - Emiting event: updated-order to user: 622f3404e36c59e6164fb63a socket [id: e3v-16__TJTOnDbQAAAV] 
+20.7.2022, 15:08:00 - INFO - No active socket for user: 622f3403e36c59e6164fb005 
+20.7.2022, 15:08:27 - INFO - Setting socket.userId = 622f3404e36c59e6164fb63a for socket [id: e3v-16__TJTOnDbQAAAV] 
+20.7.2022, 15:12:46 - INFO - Server is running on port: 3030 
+20.7.2022, 15:12:46 - INFO - New connected socket [id: 5btT1VBN6em4BZaeAAAB] 
+20.7.2022, 15:12:49 - INFO - Socket disconnected [id: undefined] 
+20.7.2022, 15:12:50 - INFO - New connected socket [id: NsoS6ZAF41raKTLjAAAD] 
+20.7.2022, 15:13:12 - DEBUG - auth.service - login with username: 35858044 
+20.7.2022, 15:13:12 - INFO - User login:  | {"_id":"622f3404e36c59e6164fb63a","fullname":"Isabel","imgUrl":"https://xsgames.co/randomusers/assets/avatars/male/43.jpg","username":"35858044"} 
+20.7.2022, 15:13:12 - INFO - Setting socket.userId = 622f3404e36c59e6164fb63a for socket [id: NsoS6ZAF41raKTLjAAAD] 
+20.7.2022, 15:13:12 - INFO - Setting socket.userId = 622f3404e36c59e6164fb63a for socket [id: NsoS6ZAF41raKTLjAAAD] 
+20.7.2022, 15:13:15 - INFO - Setting socket.userId = 622f3404e36c59e6164fb63a for socket [id: NsoS6ZAF41raKTLjAAAD] 
+20.7.2022, 15:13:15 - INFO - Setting socket.userId = 622f3404e36c59e6164fb63a for socket [id: NsoS6ZAF41raKTLjAAAD] 
+20.7.2022, 15:13:17 - INFO - No active socket for user: 622f3403e36c59e6164fb005 
+20.7.2022, 15:13:17 - INFO - Emiting event: updated-order to user: 622f3404e36c59e6164fb63a socket [id: NsoS6ZAF41raKTLjAAAD] 
+20.7.2022, 15:13:20 - INFO - No active socket for user: 622f3403e36c59e6164fb005 
+20.7.2022, 15:13:20 - INFO - Emiting event: updated-order to user: 622f3404e36c59e6164fb63a socket [id: NsoS6ZAF41raKTLjAAAD] 
+20.7.2022, 15:13:22 - INFO - No active socket for user: 622f3403e36c59e6164fb005 
+20.7.2022, 15:13:22 - INFO - Emiting event: updated-order to user: 622f3404e36c59e6164fb63a socket [id: NsoS6ZAF41raKTLjAAAD] 
+20.7.2022, 15:13:43 - INFO - Setting socket.userId = 622f3404e36c59e6164fb63a for socket [id: NsoS6ZAF41raKTLjAAAD] 
