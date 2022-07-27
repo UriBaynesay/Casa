@@ -60,21 +60,39 @@ async function addStay(req, res) {
 
     res.json(newStay)
   } catch (err) {
-    console.log(err)
     logger.error("Failed to add stay", err)
-    res.status(500).send({ err: "Failed to add stay" })
+    res.status(500).send("Failed to add stay")
   }
 }
 
 // Update stay
 async function updateStay(req, res) {
+  var loggedinUser = authService.validateToken(req.cookies.loginToken)
+  const stay = req.body
   try {
-    const stay = req.body
+    if (loggedinUser._id !== stay.host._id) throw 'not authorized'
     const updatedStay = await stayService.update(stay)
     res.json(updatedStay)
   } catch (err) {
     logger.error("Failed to update stay", err)
     res.status(500).send({ err: "Failed to update stay" })
+  }
+}
+
+async function addReview(req, res) {
+  var loggedinUser = authService.validateToken(req.cookies.loginToken)
+  const reviewTxt = req.body.txt
+  const { stayId } = req.params
+  try {
+    const review = await stayService.addReview(
+      loggedinUser,
+      stayId,
+      reviewTxt
+    )
+    res.json(review)
+  } catch (err) {
+    logger.error("Failed to add review", err)
+    res.status(500).send("Failed to add review")
   }
 }
 
@@ -84,4 +102,5 @@ module.exports = {
   addStay,
   getStayById,
   updateStay,
+  addReview,
 }
