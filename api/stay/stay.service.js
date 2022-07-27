@@ -19,9 +19,9 @@ async function getById(stayId) {
     const collection = await dbService.getCollection("stay_db")
     const stay = await collection.findOne({ _id: stayId })
     if (stay) return stay
-    throw `Stay ${stayId} was not found` 
+    throw `Stay ${stayId} was not found`
   } catch (err) {
-    logger.error('While finding stay ', err)
+    logger.error("While finding stay ", err)
     throw err
   }
 }
@@ -91,6 +91,23 @@ async function update(stay) {
   }
 }
 
+async function addReview(by, stayId, txt) {
+  try {
+    const review = {
+      at: new Date().toLocaleString(),
+      by,
+      txt,
+    }
+    const stay = await getById(stayId)
+    stay.reviews.push(review)
+    await update(stay)
+    return review
+  } catch (err) {
+    logger.error(`cannot add review to ${stay._id} `, err)
+    throw err
+  }
+}
+
 function _buildCriteria(filterBy) {
   let criteria = { $and: [{}] }
   if (filterBy.stayLocation) {
@@ -128,4 +145,5 @@ module.exports = {
   add,
   getById,
   update,
+  addReview,
 }
