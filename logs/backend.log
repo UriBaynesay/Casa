@@ -6497,3 +6497,12 @@
 28.7.2022, 13:35:42 - INFO - Removing socket.userId for socket [id: GOuHDeckqSkD8Oc0AAAF] 
 28.7.2022, 13:35:42 - INFO - Setting socket.userId = 622f3401e36c59e6164fab4d for socket [id: GOuHDeckqSkD8Oc0AAAF] 
 28.7.2022, 13:35:58 - INFO - Socket disconnected [id: undefined] 
+6.9.2022, 10:50:08 - INFO - Server is running on port: 3030 
+6.9.2022, 10:50:11 - INFO - New connected socket [id: htCviyEmZ54kTgzDAAAB] 
+6.9.2022, 10:50:18 - INFO - Socket disconnected [id: undefined] 
+6.9.2022, 10:50:18 - INFO - New connected socket [id: kwRFn2_nj37G8toYAAAD] 
+6.9.2022, 10:52:33 - INFO - Socket disconnected [id: undefined] 
+6.9.2022, 10:52:34 - INFO - New connected socket [id: w8c5U-qtyQSi_hoWAAAF] 
+6.9.2022, 10:53:30 - INFO - Socket disconnected [id: undefined] 
+6.9.2022, 10:54:07 - INFO - New connected socket [id: Go4lyDC0LTG3hoIdAAAH] 
+6.9.2022, 10:54:14 - INFO - Socket disconnected [id: undefined] 
