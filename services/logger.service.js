@@ -1,8 +1,5 @@
 const fs = require('fs')
 
-const utilService = require('./util.service')
-
-
 const logsDir = './logs'
 if (!fs.existsSync(logsDir)) {
     fs.mkdirSync(logsDir)
