@@ -22,7 +22,7 @@ if (process.env.NODE_ENV === 'production') {
         "http://localhost:3000",
       ],
       credentials: true,
-    }
+    };
     app.use(cors(corsOptions))
 }
 
