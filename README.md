@@ -7,7 +7,7 @@ Managing the communication between the frontend app to the MongoDB database.
 
 ## Live Demo :
 
-https://casa-final-proj.herokuapp.com/
+https://casa-c2ku.onrender.com/
 
 ## Technologies used :
 
