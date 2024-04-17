@@ -6512,3 +6512,31 @@
 17.4.2023, 19:01:41 - INFO - Server is running on port: 3030 
 17.4.2023, 19:04:10 - INFO - Server is running on port: 3030 
 17.4.2023, 19:04:38 - INFO - Server is running on port: 3030 
+17.4.2024, 17:26:25 - INFO - Server is running on port: 3030 
+17.4.2024, 17:26:27 - INFO - New connected socket [id: vGNngdyJJGV6viovAAAB] 
+17.4.2024, 17:28:05 - INFO - Socket disconnected [id: undefined] 
+17.4.2024, 17:28:06 - INFO - New connected socket [id: y_TvgUmNGO6Q7H1WAAAD] 
+17.4.2024, 17:30:34 - INFO - Socket disconnected [id: undefined] 
+17.4.2024, 17:30:35 - INFO - New connected socket [id: XBQ2cjB9p5W1vcn5AAAF] 
+17.4.2024, 17:35:06 - INFO - Socket disconnected [id: undefined] 
+17.4.2024, 17:35:07 - INFO - New connected socket [id: ZIiURkXGNyYBZOCRAAAH] 
+17.4.2024, 17:35:49 - DEBUG - auth.service - login with username: 6563166 
+17.4.2024, 17:35:49 - INFO - User login:  | {"_id":"622f3402e36c59e6164fadc0","fullname":"Jia Shin","imgUrl":"https://xsgames.co/randomusers/assets/avatars/female/35.jpg","username":"6563166"} 
+17.4.2024, 17:35:49 - INFO - Setting socket.userId = 622f3402e36c59e6164fadc0 for socket [id: ZIiURkXGNyYBZOCRAAAH] 
+17.4.2024, 17:35:49 - INFO - Setting socket.userId = 622f3402e36c59e6164fadc0 for socket [id: ZIiURkXGNyYBZOCRAAAH] 
+17.4.2024, 17:35:49 - INFO - Setting socket.userId = 622f3402e36c59e6164fadc0 for socket [id: ZIiURkXGNyYBZOCRAAAH] 
+17.4.2024, 17:35:52 - INFO - Setting socket.userId = 622f3402e36c59e6164fadc0 for socket [id: ZIiURkXGNyYBZOCRAAAH] 
+17.4.2024, 17:35:52 - INFO - Setting socket.userId = 622f3402e36c59e6164fadc0 for socket [id: ZIiURkXGNyYBZOCRAAAH] 
+17.4.2024, 17:35:52 - INFO - Setting socket.userId = 622f3402e36c59e6164fadc0 for socket [id: ZIiURkXGNyYBZOCRAAAH] 
+17.4.2024, 17:35:56 - INFO - Setting socket.userId = 622f3402e36c59e6164fadc0 for socket [id: ZIiURkXGNyYBZOCRAAAH] 
+17.4.2024, 17:36:00 - INFO - Setting socket.userId = 622f3402e36c59e6164fadc0 for socket [id: ZIiURkXGNyYBZOCRAAAH] 
+17.4.2024, 17:36:00 - INFO - Setting socket.userId = 622f3402e36c59e6164fadc0 for socket [id: ZIiURkXGNyYBZOCRAAAH] 
+17.4.2024, 17:36:03 - INFO - Setting socket.userId = 622f3402e36c59e6164fadc0 for socket [id: ZIiURkXGNyYBZOCRAAAH] 
+17.4.2024, 17:36:03 - INFO - Setting socket.userId = 622f3402e36c59e6164fadc0 for socket [id: ZIiURkXGNyYBZOCRAAAH] 
+17.4.2024, 17:36:15 - INFO - No active socket for user: 622f3404e36c59e6164fb597 
+17.4.2024, 17:36:17 - INFO - Setting socket.userId = 622f3402e36c59e6164fadc0 for socket [id: ZIiURkXGNyYBZOCRAAAH] 
+17.4.2024, 17:36:17 - INFO - Setting socket.userId = 622f3402e36c59e6164fadc0 for socket [id: ZIiURkXGNyYBZOCRAAAH] 
+17.4.2024, 17:36:17 - INFO - Setting socket.userId = 622f3402e36c59e6164fadc0 for socket [id: ZIiURkXGNyYBZOCRAAAH] 
+17.4.2024, 17:36:42 - INFO - Socket disconnected [id: undefined] 
+17.4.2024, 17:41:39 - INFO - New connected socket [id: aqrTQ1FU_A3G2mkkAAAJ] 
+17.4.2024, 17:42:45 - INFO - Socket disconnected [id: undefined] 
