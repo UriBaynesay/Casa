@@ -1,5 +1,4 @@
 const userService = require("./user.service")
-const socketService = require("../../services/socket.service")
 const logger = require("../../services/logger.service")
 const authService = require("../auth/auth.service")
 
@@ -34,15 +33,13 @@ async function deleteUser(req, res) {
 }
 
 async function updateUser(req, res) {
-  var loggedinUser = authService.validateToken(req.cookies.loginToken)
-
+  const loggedInUser = authService.validateToken(req.cookies.loginToken)
+  if (loggedInUser._id !== req.params.userId)
+    res.status(500).send({err: "Failed to update user, not autherized to update the requested user"})
   try {
-    const user = req.body
-    if (loggedinUser._id !== user._id) {
-      return res.status(500).send({ err: "Failed to update user" })
-    }
-    const savedUser = await userService.update(user)
-    res.send(savedUser)
+    const updatedFields = req.body
+    await userService.update(loggedInUser._id, updatedFields)
+    res.send("Updated succesfully")
   } catch (err) {
     logger.error("Failed to update user", err)
     res.status(500).send({ err: "Failed to update user" })
