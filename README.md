@@ -49,7 +49,7 @@ To run the Casa Backend using Docker, follow these steps:
    Run the Docker container using the built image:
 
    ```bash
-   docker run -p 3030:3030 casa-backend
+   docker run -d -p 3030:3030 casa-backend
    ```
 
 4. **Verify the Container is Running**
