@@ -1,3 +1,1 @@
-module.exports = {
-  dbURL: process.env.MONGODB_URL,
-}
+module.exports = { dbURL: process.env.MONGODB_URL }
