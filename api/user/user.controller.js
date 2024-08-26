@@ -35,7 +35,7 @@ async function deleteUser(req, res) {
 async function updateUser(req, res) {
   const loggedInUser = authService.validateToken(req.cookies.loginToken)
   if (loggedInUser._id !== req.params.userId)
-    res.status(500).send({err: "Failed to update user, not autherized to update the requested user"})
+    return res.status(500).send({err: "Failed to update user, not autherized to update the requested user"})
   try {
     const updatedFields = req.body
     await userService.update(loggedInUser._id, updatedFields)
