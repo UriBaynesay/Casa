@@ -48,9 +48,10 @@ async function addStay(req, res) {
   var loggedinUser = authService.validateToken(req.cookies.loginToken)
 
   try {
-    var stay = req.body
-    stay.host = await userService.getById(loggedinUser._id)
-    const newStay = await stayService.add(stay)
+    const stayFields = req.body
+    const stayImages = req.files.images
+    stayFields.host = await userService.getById(loggedinUser._id)
+    const newStay = await stayService.add(stayFields,stayImages)
 
     // socketService.broadcast({type: 'review-added', data: review, userId: review.byUserId})
     // socketService.emitToUser({type: 'review-about-you', data: review, userId: review.aboutUserId})
