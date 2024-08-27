@@ -1,5 +1,6 @@
 const dbService = require("../../services/db.service")
 const logger = require("../../services/logger.service")
+const { uploadImages } = require("../../services/upload.service")
 const ObjectId = require("mongodb").ObjectId
 
 async function query(filterBy = {}) {
@@ -39,24 +40,25 @@ async function remove(stayId, loggedInUser) {
   }
 }
 
-async function add(stay) {
+async function add(stayFields,images) {
   try {
+    const imgUrls = await uploadImages(images)
     const stayToAdd = {
       _id: ObjectId().toString(),
-      name: stay.name,
-      summary: stay.summary,
-      houseRules: stay.houseRules,
-      propertyType: stay.propertyType,
-      roomType: stay.roomType,
-      capacity: stay.capacity,
-      bedrooms: stay.bedrooms,
-      beds: stay.beds,
+      name: stayFields.name,
+      summary: stayFields.summary,
+      houseRules: stayFields.houseRules,
+      propertyType: stayFields.propertyType,
+      roomType: stayFields.roomType,
+      capacity: stayFields.capacity,
+      bedrooms: stayFields.bedrooms,
+      beds: stayFields.beds,
       numOfReviews: 0,
-      amenities: stay.amenities,
-      address: stay.address,
-      host: stay.host,
-      bathrooms: stay.bedrooms,
-      price: stay.price,
+      amenities: stayFields.amenities,
+      address: stayFields.address,
+      host: stayFields.host,
+      bathrooms: stayFields.bedrooms,
+      price: stayFields.price,
       reviewScores: {
         accuracy: 0,
         cleanliness: 0,
@@ -67,7 +69,7 @@ async function add(stay) {
         rating: 0,
       },
       reviews: [],
-      imgUrls: stay.imgUrls,
+      imgUrls: imgUrls,
     }
     const collection = await dbService.getCollection("stay_db")
     await collection.insertOne(stayToAdd)
