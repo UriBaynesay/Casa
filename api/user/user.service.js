@@ -76,7 +76,10 @@ async function add(user) {
       username: user.username,
       password: user.password,
       fullname: user.fullname,
-      imgUrl: user.imgUrl,
+      imgUrl: `https://ui-avatars.com/api/?name=${user.fullname.replace(
+        " ",
+        "+"
+      )}`,
       createdAt: Date.now(),
     }
     const collection = await dbService.getCollection("user_db")
