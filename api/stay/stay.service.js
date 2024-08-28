@@ -94,13 +94,10 @@ async function add(stayFields, images) {
   }
 }
 
-async function update(stay) {
+async function update(stayId, fields) {
   try {
     const collection = await dbService.getCollection(COLLECTION_NAME)
-    const updatedStay = { ...stay }
-    delete updatedStay._id
-    await collection.updateOne({ _id: stay._id }, { $set: updatedStay })
-    return stay
+    await collection.updateOne({ _id: stayId }, { $set: fields })
   } catch (err) {
     logger.error(`cannot update stay ${stay._id}`, err)
     throw err

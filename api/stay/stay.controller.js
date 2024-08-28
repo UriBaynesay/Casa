@@ -78,14 +78,16 @@ async function addStay(req, res) {
 // Update stay
 async function updateStay(req, res) {
   var loggedinUser = authService.validateToken(req.cookies.loginToken)
-  const stay = req.body
+  const fields = req.body
+  const { stayId } = req.params
   try {
-    if (loggedinUser._id !== stay.host._id) throw "not authorized"
-    const updatedStay = await stayService.update(stay)
-    res.json(updatedStay)
+    const stay = await stayService.getById(stayId)
+    if (loggedinUser._id !== stay.host._id) throw "Not Authorized"
+    await stayService.update(stayId, fields)
+    res.send('Updated succesfully')
   } catch (err) {
     logger.error("Failed to update stay", err)
-    res.status(500).send({ err: "Failed to update stay" })
+    res.status(500).send(err)
   }
 }
 
