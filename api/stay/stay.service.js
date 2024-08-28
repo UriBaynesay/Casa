@@ -3,10 +3,12 @@ const logger = require("../../services/logger.service")
 const { uploadImages } = require("../../services/upload.service")
 const ObjectId = require("mongodb").ObjectId
 
+const COLLECTION_NAME = "stay_db"
+
 async function query(filterBy = {}) {
   try {
     const criteria = _buildCriteria(filterBy)
-    const collection = await dbService.getCollection("stay_db")
+    const collection = await dbService.getCollection(COLLECTION_NAME)
     const stays = await collection.find(criteria).toArray()
     return stays
   } catch (err) {
@@ -15,9 +17,21 @@ async function query(filterBy = {}) {
   }
 }
 
+async function topFiveStays() {
+  try {
+    const collection = await dbService.getCollection(COLLECTION_NAME)
+    const stays = collection
+      .aggregate([{ $sort: { "reviewScores.rating": -1 } }, { $limit: 4 }])
+      .toArray()
+    return stays
+  } catch (error) {
+    throw error
+  }
+}
+
 async function getById(stayId) {
   try {
-    const collection = await dbService.getCollection("stay_db")
+    const collection = await dbService.getCollection(COLLECTION_NAME)
     const stay = await collection.findOne({ _id: stayId })
     if (stay) return stay
     throw `Stay ${stayId} was not found`
@@ -29,7 +43,7 @@ async function getById(stayId) {
 
 async function remove(stayId, loggedInUser) {
   try {
-    const collection = await dbService.getCollection("stay_db")
+    const collection = await dbService.getCollection(COLLECTION_NAME)
     const criteria = { _id: stayId }
     if (!loggedInUser.isAdmin) criteria["host._id"] = loggedInUser._id
     const { deletedCount } = await collection.deleteOne(criteria)
@@ -40,7 +54,7 @@ async function remove(stayId, loggedInUser) {
   }
 }
 
-async function add(stayFields,images) {
+async function add(stayFields, images) {
   try {
     const imgUrls = await uploadImages(images)
     const stayToAdd = {
@@ -71,7 +85,7 @@ async function add(stayFields,images) {
       reviews: [],
       imgUrls: imgUrls,
     }
-    const collection = await dbService.getCollection("stay_db")
+    const collection = await dbService.getCollection(COLLECTION_NAME)
     await collection.insertOne(stayToAdd)
     return stayToAdd
   } catch (err) {
@@ -82,7 +96,7 @@ async function add(stayFields,images) {
 
 async function update(stay) {
   try {
-    const collection = await dbService.getCollection("stay_db")
+    const collection = await dbService.getCollection(COLLECTION_NAME)
     const updatedStay = { ...stay }
     delete updatedStay._id
     await collection.updateOne({ _id: stay._id }, { $set: updatedStay })
@@ -143,6 +157,7 @@ function _buildCriteria(filterBy) {
 
 module.exports = {
   query,
+  topFiveStays,
   remove,
   add,
   getById,

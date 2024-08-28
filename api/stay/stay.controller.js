@@ -14,6 +14,15 @@ async function getStays(req, res) {
   }
 }
 
+async function getTopStays(req, res) {
+  try {
+    const stays = await stayService.topFiveStays()
+    return res.json(stays)
+  } catch (error) {
+    return res.status(500).send(error)
+  }
+}
+
 // GET BY ID
 async function getStayById(req, res) {
   try {
@@ -51,7 +60,7 @@ async function addStay(req, res) {
     const stayFields = req.body
     const stayImages = req.files.images
     stayFields.host = await userService.getById(loggedinUser._id)
-    const newStay = await stayService.add(stayFields,stayImages)
+    const newStay = await stayService.add(stayFields, stayImages)
 
     // socketService.broadcast({type: 'review-added', data: review, userId: review.byUserId})
     // socketService.emitToUser({type: 'review-about-you', data: review, userId: review.aboutUserId})
@@ -71,7 +80,7 @@ async function updateStay(req, res) {
   var loggedinUser = authService.validateToken(req.cookies.loginToken)
   const stay = req.body
   try {
-    if (loggedinUser._id !== stay.host._id) throw 'not authorized'
+    if (loggedinUser._id !== stay.host._id) throw "not authorized"
     const updatedStay = await stayService.update(stay)
     res.json(updatedStay)
   } catch (err) {
@@ -85,11 +94,7 @@ async function addReview(req, res) {
   const reviewTxt = req.body.txt
   const { stayId } = req.params
   try {
-    const review = await stayService.addReview(
-      loggedinUser,
-      stayId,
-      reviewTxt
-    )
+    const review = await stayService.addReview(loggedinUser, stayId, reviewTxt)
     res.json(review)
   } catch (err) {
     logger.error("Failed to add review", err)
@@ -99,6 +104,7 @@ async function addReview(req, res) {
 
 module.exports = {
   getStays,
+  getTopStays,
   deleteStay,
   addStay,
   getStayById,
