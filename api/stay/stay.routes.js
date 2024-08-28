@@ -8,6 +8,7 @@ const {
   getStayById,
   updateStay,
   addReview,
+  getTopStays,
 } = require("./stay.controller")
 const router = express.Router()
 
@@ -15,6 +16,7 @@ const router = express.Router()
 //router.use(requireAuth)
 
 router.get("/", log, getStays)
+router.get("/top-stays", getTopStays)
 router.get("/:stayId", getStayById)
 router.post("/", log, requireAuth, addStay)
 router.put("/:stayId", requireAuth, updateStay)
