@@ -43,13 +43,13 @@ async function deleteStay(req, res) {
       loggedInUser
     )
     if (deletedCount === 1) {
-      res.send({ msg: "Deleted successfully" })
+      return res.send("Deleted successfully" )
     } else {
-      res.status(400).send({ err: "Cannot remove stay" })
+      throw "You're not allowed to delete this stay"
     }
   } catch (err) {
     logger.error("Failed to delete stay", err)
-    res.status(500).send({ err: "Failed to delete stay" })
+    res.status(500).send("Not authorized to delete this stay" )
   }
 }
 
