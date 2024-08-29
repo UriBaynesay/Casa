@@ -49,7 +49,7 @@ async function remove(stayId, loggedInUser) {
     const { deletedCount } = await collection.deleteOne(criteria)
     return deletedCount
   } catch (err) {
-    logger.error(`cannot remove review ${stayId}`, err)
+    logger.error(`cannot remove stay ${stayId}`, err)
     throw err
   }
 }
@@ -70,7 +70,7 @@ async function add(stayFields, images) {
       numOfReviews: 0,
       amenities: stayFields.amenities,
       address: stayFields.address,
-      host: stayFields.host,
+      host: { ...stayFields.host, thumbnailUrl : stayFields.host.imgUrl},
       bathrooms: stayFields.bedrooms,
       price: stayFields.price,
       reviewScores: {
