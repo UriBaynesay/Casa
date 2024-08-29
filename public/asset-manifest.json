@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.30f88b3a.css",
-    "main.js": "/static/js/main.f766c7ca.js",
+    "main.js": "/static/js/main.b9bc4515.js",
     "static/media/rio.jpg": "/static/media/rio.e2ccddce24aefcde6f5c.jpg",
     "static/media/newyork.jpg": "/static/media/newyork.171741f188f0321b5191.jpg",
     "static/media/barcelona.jpg": "/static/media/barcelona.2100eb2df31a7c94f31a.jpg",
@@ -20,10 +20,10 @@
     "index.html": "/index.html",
     "static/media/star.svg": "/static/media/star.523d9e205c20990b0c1b62dddc8cee4b.svg",
     "main.30f88b3a.css.map": "/static/css/main.30f88b3a.css.map",
-    "main.f766c7ca.js.map": "/static/js/main.f766c7ca.js.map"
+    "main.b9bc4515.js.map": "/static/js/main.b9bc4515.js.map"
   },
   "entrypoints": [
     "static/css/main.30f88b3a.css",
-    "static/js/main.f766c7ca.js"
+    "static/js/main.b9bc4515.js"
   ]
 }
