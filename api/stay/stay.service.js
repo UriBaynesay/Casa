@@ -113,7 +113,8 @@ async function addReview(by, stayId, txt) {
     }
     const stay = await getById(stayId)
     stay.reviews.push(review)
-    await update(stay)
+    stay.numOfReviews+=1
+    await update(stay._id,{reviews:[...stay.reviews],numOfReviews})
     return review
   } catch (err) {
     logger.error(`cannot add review to ${stay._id} `, err)
