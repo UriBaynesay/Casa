@@ -61,13 +61,6 @@ async function addStay(req, res) {
     const stayImages = req.files.images
     stayFields.host = await userService.getById(loggedinUser._id)
     const newStay = await stayService.add(stayFields, stayImages)
-
-    // socketService.broadcast({type: 'review-added', data: review, userId: review.byUserId})
-    // socketService.emitToUser({type: 'review-about-you', data: review, userId: review.aboutUserId})
-
-    // const fullUser = await userService.getById(loggedinUser._id)
-    // socketService.emitTo({type: 'user-updated', data: fullUser, label: fullUser._id})
-
     res.json(newStay)
   } catch (err) {
     logger.error("Failed to add stay", err)
