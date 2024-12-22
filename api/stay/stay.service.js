@@ -69,8 +69,12 @@ async function add(stayFields, images) {
       beds: stayFields.beds,
       numOfReviews: 0,
       amenities: stayFields.amenities,
-      address: stayFields.address,
-      host: { ...stayFields.host, thumbnailUrl : stayFields.host.imgUrl},
+      address: {
+        city: stayFields.city,
+        street: stayFields.street,
+        country: stayFields.country,
+      },
+      host: { ...stayFields.host, thumbnailUrl: stayFields.host.imgUrl },
       bathrooms: stayFields.bedrooms,
       price: stayFields.price,
       reviewScores: {
@@ -113,8 +117,8 @@ async function addReview(by, stayId, txt) {
     }
     const stay = await getById(stayId)
     stay.reviews.push(review)
-    stay.numOfReviews+=1
-    await update(stay._id,{reviews:[...stay.reviews],numOfReviews})
+    stay.numOfReviews += 1
+    await update(stay._id, { reviews: [...stay.reviews], numOfReviews })
     return review
   } catch (err) {
     logger.error(`cannot add review to ${stay._id} `, err)
