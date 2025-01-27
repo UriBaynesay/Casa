@@ -36,7 +36,7 @@ async function getStayById(req, res) {
 }
 
 async function deleteStay(req, res) {
-  var loggedInUser = authService.validateToken(req.cookies.loginToken)
+  const loggedInUser = authService.validateToken(req.cookies.loginToken)
   try {
     const deletedCount = await stayService.remove(
       req.params.stayId,
@@ -54,7 +54,7 @@ async function deleteStay(req, res) {
 }
 
 async function addStay(req, res) {
-  var loggedinUser = authService.validateToken(req.cookies.loginToken)
+  const loggedinUser = authService.validateToken(req.cookies.loginToken)
 
   try {
     const stayFields = req.body
@@ -70,7 +70,7 @@ async function addStay(req, res) {
 
 // Update stay
 async function updateStay(req, res) {
-  var loggedinUser = authService.validateToken(req.cookies.loginToken)
+  const loggedinUser = authService.validateToken(req.cookies.loginToken)
   const fields = req.body
   const { stayId } = req.params
   try {
@@ -85,7 +85,7 @@ async function updateStay(req, res) {
 }
 
 async function addReview(req, res) {
-  var loggedinUser = authService.validateToken(req.cookies.loginToken)
+  const loggedinUser = authService.validateToken(req.cookies.loginToken)
   const reviewTxt = req.body.txt
   const { stayId } = req.params
   try {
