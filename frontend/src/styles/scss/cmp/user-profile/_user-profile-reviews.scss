@@ -40,9 +40,6 @@
     gap: 50px;
     .review-card {
       -webkit-column-break-inside: avoid;
-      &:nth-child(even) {
-        justify-self: end;
-      }
       p {
         width: 400px;
       }
