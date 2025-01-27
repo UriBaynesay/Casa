@@ -1,0 +1,104 @@
+.stay-details-container {
+  grid-area: content;
+  .stay-title-info-container {
+    .stay-name {
+      line-height: 30px;
+      font-size: 26px;
+    }
+    .short-desc {
+      margin-top: 12px;
+      display: flex;
+      font-size: 15px;
+      justify-content: space-between;
+      .stats {
+        color: $main-black;
+        font-weight: 600;
+        .reviews {
+          text-decoration: underline;
+        }
+        .seperate-dott {
+          margin-inline: 8px;
+        }
+        .super-host {
+          font-weight: 400;
+        }
+        .address {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .img-layout {
+    padding-top: 25px;
+    @media (max-width: 899px) {
+      img {
+        border-radius: 1em;
+      }
+      .stay-imgs-container {
+        display: none;
+      }
+    }
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .info-reserve {
+    @media (max-width: 899px) {
+      display: grid;
+      grid-template-areas: "order" "info";
+    }
+  }
+  .map-container{
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 900px) {
+  .stay-details-container {
+    margin-top: 12px;
+    .stay-title-info-container {
+      height: 86px;
+      .stay-name {
+        padding-top: 24px;
+      }
+    }
+    .img-layout {
+      .imgs-carousel-container {
+        display: none;
+      }
+      margin-bottom: 17px;
+      .stay-imgs-container {
+        height: 100%;
+        display: grid;
+        grid-template-columns: 2.05fr 1fr 1fr;
+        grid-template-rows: 260px 260px;
+        grid-gap: 10px;
+        border-radius: 12px;
+
+        .main-img-container {
+          grid-column: 1/2;
+          grid-row: 1/-1;
+          border-radius: 12px 0px 0px 12px;
+        }
+      }
+    }
+
+    .info-reserve {
+      display: flex;
+      justify-content: stretch;
+    }
+
+    .host-info {
+      border-top: 1px solid rgb(221, 221, 221);
+      padding-top: 48px;
+      padding-bottom: 48px;
+    }
+    .short-info-container {
+      h4 {
+        font-size: 18px;
+      }
+    }
+  }
+}

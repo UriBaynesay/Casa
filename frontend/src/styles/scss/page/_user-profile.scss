@@ -1,0 +1,31 @@
+.user-profile-page {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  @media (max-width: 949px) {
+    .app-header {
+      .search-container {
+        display: none;
+      }
+    }
+  }
+  .user-profile {
+    .user-profile-container {
+      grid-area: content;
+    }
+    @media (max-width: 949px) {
+      .user-profile-container {
+        > *:not(:first-child) {
+          margin-top: 24px;
+        }
+      }
+    }
+    @media (min-width: 950px) {
+      margin-top: 50px;
+      .user-profile-container {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+      }
+    }
+  }
+}

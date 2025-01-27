@@ -1,0 +1,11 @@
+.main-layout{
+    display: grid;
+    grid-template-columns: minmax(5px,1fr) minmax(auto,1600px) minmax(5px,1fr);
+    grid-template-areas: ". content .";
+}
+
+.details-layout{
+    display: grid;
+    grid-template-columns: minmax(5px,1fr) minmax(auto,1120px) minmax(5px,1fr);
+    grid-template-areas: ". content .";
+}

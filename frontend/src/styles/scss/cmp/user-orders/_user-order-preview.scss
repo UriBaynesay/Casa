@@ -1,0 +1,32 @@
+.order-preview-container {
+  border-bottom: 1px solid $light-grey;
+  
+  button {
+    font-size: 18px;
+    &:disabled {
+      color: lightgray;
+    }
+  }
+
+  button:hover:not(:disabled) {
+    text-decoration: underline;
+  }
+
+  .accept-btn {
+    color: darkgreen;
+  }
+  .decline-btn {
+    color: darkred;
+  }
+  @media (min-width: 950px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    > * {
+      padding-block: 30px;
+      font-size: 18px;
+      @media (max-width: 949px) {
+        margin-right: 8px;
+      }
+    }
+  }
+}

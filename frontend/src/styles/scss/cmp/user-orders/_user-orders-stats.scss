@@ -1,0 +1,39 @@
+.stats-container {
+  display: flex;
+  margin-bottom: 6px;
+  h1 {
+    font-weight: 400;
+  }
+  > * {
+    border-radius: 1em;
+    border: 1px solid $light-grey;
+    padding: 6px;
+  }
+  .orders-status-container {
+    display: flex;
+    > * {
+      padding-right: 12px;
+    }
+  }
+  @media (max-width: 949px) {
+    flex-direction: column;
+    align-items: start;
+    font-size: 10px;
+    gap: 6px;
+  }
+  @media (min-width: 950px) {
+    margin-bottom: 50px;
+    justify-content: center;
+    > * {
+      padding: 20px;
+    }
+    > *:not(:last-child) {
+      margin-right: 12px;
+    }
+    .orders-status-container {
+      > * {
+        padding-right: 40px;
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.login-page {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  .login-container {
+    grid-area: content;
+    font-size: 14px;
+    .MuiBox-root{
+      margin-top: 20px;
+    }
+  }
+  @media (max-width:949px) {
+    .search-container {
+      display: none;
+    }
+  }
+}

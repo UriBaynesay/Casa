@@ -1,0 +1,27 @@
+.hero {
+  background-color: black;
+  padding-top: 32px;
+  padding-bottom: 50px;
+  .hero-container {
+    grid-area: content;
+    .img-container {
+      height: 60vh;
+      position: relative;
+      img {
+        border-radius: 0.5em;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+      }
+      .hero-txt {
+        color: white;
+        font-weight: 400;
+        font-size: 22px;
+        position: absolute;
+        width: 100%;
+        top: 60%;
+        text-align: center;
+      }
+    }
+  }
+}

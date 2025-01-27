@@ -1,0 +1,26 @@
+.user-trips-list-container {
+  .user-trips-table-titles-container {
+    display: none;
+  }
+  .user-trip-preview-container {
+    border-bottom: 1px solid $light-grey;
+  }
+  @media (max-width: 949px) {
+    .user-trip-preview-container {
+      margin-top: 32px;
+    }
+  }
+  @media (min-width: 950px) {
+    .user-trips-table-titles-container {
+      margin-top: 32px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+    .user-trip-preview-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      padding-block: 30px;
+      font-size: 18px;
+    }
+  }
+}

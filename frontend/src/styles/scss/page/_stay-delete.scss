@@ -1,0 +1,12 @@
+.stay-delete {
+  .stay-delete-container {
+    grid-area: content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-inline: 16vw;
+    >*:not(:first-child){
+        margin-top: 30px;
+    }
+  }
+}
