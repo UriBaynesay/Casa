@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkcasa=self.webpackChunkcasa||[]).push([[656],{656:function(u,a,c){c.r(a);var n=c(9434),f=c(6871),s=c(1280),t=c(3261),e=c(2791);a.default=function(){var u=(0,n.I0)(),a=(0,f.s0)();(0,e.useEffect)((function(){c()}),[]);var c=function(){s.LR.logout(),u((0,t.$4)()),a("/")}}}}]);
-//# sourceMappingURL=656.eea93edb.chunk.js.map
