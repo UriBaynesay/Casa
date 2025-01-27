@@ -1,0 +1,24 @@
+.hosting-info-container {
+  .profile-reviews-list-container{
+    padding-bottom: 32px;
+    border-bottom: solid 1px lightgray;
+  }
+  .reviews-btn {
+    border: 1px solid $black;
+    border-radius: 8px;
+    width: fit-content;
+    padding: 13px 23px;
+    cursor: pointer;
+  }
+  .profile-stays-list-container{
+    margin-top: 32px;
+  }
+  @media (max-width:949px) {
+    margin-top: 18px;
+    padding-top: 18px;
+    border-top: solid 1px lightgray;
+  }
+  @media (min-width:950px) {
+    padding-inline: 48px;
+  }
+}

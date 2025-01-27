@@ -1,0 +1,112 @@
+.search-container {
+  padding-top: 8px;
+  @media (max-width:1149px) {
+    min-width: 55vw;
+  }
+  .input-container {
+    background-color: white;
+    border: 1px solid $secondary-grey;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 8%);
+    border-radius: 2rem;
+    > *:not(:last-child) {
+      padding-left: 35px;
+      .txt {
+        cursor: pointer;
+        .title {
+          color: black;
+          font-weight: 600;
+          font-size: 12px;
+        }
+        .description {
+          font-weight: 400;
+          color: $main-grey;
+          font-size: 14px;
+        }
+      }
+    }
+    .search-btn-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-right: 6px;
+      .search-btn {
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(255, 56, 92);
+        border-radius: 50%;
+        aspect-ratio: 1;
+        padding: 4px;
+      }
+    }
+    @media (max-width:1149px) {
+      display: flex;
+      justify-content: space-between;
+      .date-checkin-container,.date-checkout-container,.guests-container{
+        display: none;
+      }
+      
+    }
+  }
+  &.homepage {
+    box-shadow: none;
+    .input-container {
+      border: none;
+      box-shadow: none;
+    }
+  }
+  @media (max-width:1149px) {
+    .modal-container{
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 1150px) {
+  .search-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .input-container {
+      display: grid;
+      grid-template-columns: 1fr 0.65fr 0.65fr 0.65fr 0.25fr;
+      &:hover {
+        transition: 0.1s;
+        box-shadow: 0 4px 8px rgb(0 0 0 / 5%);
+      }
+      > *:not(:last-child) {
+        padding-block: 4px;
+      }
+      .separator {
+        width: 1px;
+        background-color: $light-grey;
+      }
+    }
+    &.homepage {
+      padding-top: 82px;
+      justify-content: flex-start;
+      align-items: stretch;
+      .input-container {
+        height: 65px;
+        > *:not(:last-child) {
+          padding-block: 15px;
+        }
+        .search-btn-container {
+          .search-btn {
+            padding: 12px;
+          }
+        }
+      }
+    }
+    .modal-container {
+      position: absolute;
+      z-index: 10;
+      bottom: 0px;
+      transform: translateY(100%);
+      width: 100%;
+    }
+  }
+}

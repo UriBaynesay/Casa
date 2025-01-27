@@ -1,0 +1,9 @@
+.user-orders-list-container {
+  > *:not(:first-child){
+    margin-top: 16px;
+  }
+  @media (max-width: 949px) {
+    margin-top: 18px;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,32 @@
+.stay-edit-form-container {
+  margin-inline-start: 24px;
+  h2{
+    text-align: center;
+  }
+  .submit-button {
+    margin-top: 24px;
+    display: block;
+    margin-inline: auto;
+  }
+  .form-inputs-container {
+    &>*{
+      margin-top: 8px;
+    }
+    .amenities-container {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-column: 1 / -1;
+    }
+    .images-input-container{
+      grid-column: 1 / -1;
+    }
+    @media (min-width: 900px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding-inline: 20vw;
+      .amenities-container {
+        grid-template-columns: auto auto auto;
+      }
+    }
+  }
+}

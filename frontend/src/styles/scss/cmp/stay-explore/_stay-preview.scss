@@ -1,0 +1,46 @@
+.stay-preview-container {
+  white-space: nowrap;
+  font-size: 16px;
+
+  .stay-img-container {
+    img {
+      aspect-ratio: 21/20;
+      border-radius: 0.8em;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+    &:hover {
+      .carousel.carousel-slider .control-arrow {
+        display: none;
+      }
+    }
+    .control-dots {
+      margin: 0px;
+    }
+  }
+  .top-summary {
+    padding-top: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    display: grid;
+    grid-template-columns: 3fr 0.5fr;
+    .stay-address {
+      font-weight: 600;
+      overflow: hidden;
+      color: #222222;
+    }
+    .star-rating {
+      justify-self: center;
+    }
+  }
+  .stay-quick-data {
+    text-overflow: hidden;
+    color: #717171;
+  }
+  .stay-price {
+    padding-top: 5px;
+    color: #222222;
+    font-weight: 600;
+  }
+}

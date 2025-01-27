@@ -1,0 +1,52 @@
+.review-cards-container {
+  max-height: 380px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  .review-card {
+    margin-bottom: 30px;
+    p {
+      height: 72px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 16px;
+    }
+    .writer-info-container {
+      display: flex;
+      font-size: 16px;
+      h4 {
+        justify-self: center;
+        align-self: center;
+      }
+      .writer-img-container {
+        flex-basis: 10%;
+        border-radius: 50%;
+        padding-right: 10px;
+        padding-bottom: 15px;
+        img {
+          border-radius: inherit;
+          object-fit: cover;
+          vertical-align: bottom;
+          position: static;
+          height: 56px;
+          width: 56px;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 900px) {
+    margin: 20px;
+    column-count: 2;
+    gap: 50px;
+    .review-card {
+      -webkit-column-break-inside: avoid;
+      &:nth-child(even) {
+        justify-self: end;
+      }
+      p {
+        width: 400px;
+      }
+
+    }
+  }
+}

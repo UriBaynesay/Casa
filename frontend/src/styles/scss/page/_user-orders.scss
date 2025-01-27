@@ -1,0 +1,18 @@
+.user-orders-container {
+  grid-area: content;
+  .order-title{
+    margin-top: 18px;
+  }
+  @media (max-width: 949px) {
+    .user-orders-table-titles-container {
+      display: none;
+    }
+  }
+  @media (min-width: 950px) {
+    .user-orders-table-titles-container {
+      margin-top: 18px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+  }
+}
