@@ -4,15 +4,26 @@
 
 @media (min-width: 850px) {
   .stay-app-container {
-    .filter-btn-container{
+    .filter-btn-container {
       display: none;
     }
     margin-top: 30px;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 80px 1fr;
+    grid-template-rows: 80px 1fr 40px;
     grid-template-areas:
       "filter"
-      "stay";
+      "stay"
+      "pagination";
+    .pagination-container {
+      grid-area: pagination;
+      display: flex;
+      justify-content: center;
+      align-items: end;
+      gap: 10px;
+      button{
+        padding-right: 0;
+      }
+    }
   }
 }

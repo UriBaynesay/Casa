@@ -5,12 +5,17 @@ const { getOrdersForDates } = require("../order/order.service")
 const ObjectId = require("mongodb").ObjectId
 
 const COLLECTION_NAME = "stay_db"
+const PAGE_SIZE = 40
 
 async function query(filterBy = {}) {
   try {
     const criteria = _buildCriteria(filterBy)
     const collection = await dbService.getCollection(COLLECTION_NAME)
-    let stays = await collection.find(criteria).toArray()
+    let stays = await collection
+      .find(criteria)
+      .limit(PAGE_SIZE)
+      .skip(filterBy.page ? parseInt(filterBy.page*PAGE_SIZE) : 0)
+      .toArray()
     if (filterBy.startDate && filterBy.endDate) {
       const orders = await getOrdersForDates(
         filterBy.startDate,

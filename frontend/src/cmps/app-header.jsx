@@ -77,7 +77,7 @@ export const AppHeader = ({ theme }) => {
 
           <Link
             className="explore"
-            to="/stays"
+            to="/stays?page=0"
           >
             Explore
           </Link>
