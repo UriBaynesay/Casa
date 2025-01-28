@@ -2,10 +2,12 @@ const dbService = require("../../services/db.service")
 const logger = require("../../services/logger.service")
 const ObjectId = require("mongodb").ObjectId
 
+const COLLECTION_NAME = "order_db"
+
 async function query(filterBy = {}) {
   try {
     const criteria = _buildCriteria(filterBy)
-    const collection = await dbService.getCollection("order_db")
+    const collection = await dbService.getCollection(COLLECTION_NAME)
     let orders = await collection
       .aggregate([
         { $match: criteria },
@@ -53,7 +55,7 @@ async function query(filterBy = {}) {
 
 async function getById(orderId) {
   try {
-    const collection = await dbService.getCollection("order_db")
+    const collection = await dbService.getCollection(COLLECTION_NAME)
     const order = await collection.findOne({ _id: ObjectId(orderId) })
     return order
   } catch (err) {
@@ -64,7 +66,7 @@ async function getById(orderId) {
 
 async function remove(orderId, loggedInUser) {
   try {
-    const collection = await dbService.getCollection("order_db")
+    const collection = await dbService.getCollection(COLLECTION_NAME)
     const criteria = { _id: ObjectId(orderId) }
     criteria.userId = ObjectId(loggedInUser._id)
     const { deletedCount } = await collection.deleteOne(criteria)
@@ -87,7 +89,7 @@ async function add(order) {
       guestCount: order.guestCount,
       status: "pending",
     }
-    const collection = await dbService.getCollection("order_db")
+    const collection = await dbService.getCollection(COLLECTION_NAME)
     await collection.insertOne(orderToAdd)
     return orderToAdd
   } catch (err) {
@@ -109,7 +111,7 @@ async function update(order, loggedInUser) {
       startDate: order.startDate,
       endDate: order.endDate,
     }
-    const collection = await dbService.getCollection("order_db")
+    const collection = await dbService.getCollection(COLLECTION_NAME)
     await collection.updateOne(
       { _id: ObjectId(order._id) },
       { $set: { ...orderToSave } }
@@ -117,6 +119,32 @@ async function update(order, loggedInUser) {
     return order
   } catch (err) {
     logger.error(`cannot update order ${order._id}`, err)
+    throw err
+  }
+}
+
+async function getOrdersForDates(startDate, endDate) {
+  try {
+    const collection = await dbService.getCollection(COLLECTION_NAME)
+    const stays = await collection
+      .find({
+        $or: [
+          {
+            $and: [
+              { startDate: { $gte: parseInt(startDate) } },
+              { startDate: { $lte: parseInt(endDate) } },
+            ],
+          },
+          {
+            startDate: { $lte: parseInt(startDate) },
+            endDate: { $gte: parseInt(startDate) },
+          },
+        ],
+      })
+      .toArray()
+    return stays
+  } catch (err) {
+    logger.error("cannot find orders", err)
     throw err
   }
 }
@@ -142,4 +170,5 @@ module.exports = {
   add,
   getById,
   update,
+  getOrdersForDates,
 }

@@ -2,8 +2,7 @@ import { LocationModal } from "./search-by-location-modal"
 import { SearchByDate } from "./stay-filter-search-dates"
 import { GuestModal } from "./search-by-guest-modal"
 
-export const SearchModal = ({ modal, onSetFilter, onCloseModal }) => {
-  const onSetDates = () => {}
+export const SearchModal = ({ modal, onSetFilter, onCloseModal, onSetDates }) => {
 
   if (modal === "location") {
     return (
