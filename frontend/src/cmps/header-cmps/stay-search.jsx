@@ -1,9 +1,7 @@
 import { useState, useEffect } from "react"
 import { useNavigate, useLocation } from "react-router-dom"
-import { useDispatch } from "react-redux"
 
 import { SearchModal } from "./search-modal.jsx"
-import { setStays } from "../../store/action/stay.action.js"
 
 import SearchIcon from "@mui/icons-material/Search"
 
@@ -13,7 +11,6 @@ export const StaySearch = () => {
   const [openModal, setOpenModal] = useState(null)
   const [dates, setDates] = useState()
   const location = useLocation()
-  const dispatch = useDispatch()
   const navigate = useNavigate()
 
   const onOpenModal = (modal) => {
@@ -34,10 +31,11 @@ export const StaySearch = () => {
     // dispatch(setFilterBy(searchBy))
     // setSearchBy({})
     const urlSearchParams = new URLSearchParams()
+    urlSearchParams.append("page", 0)
     for (const key in searchBy) {
       urlSearchParams.append(key, searchBy[key])
     }
-    if (dates.startDate && dates.endDate) {
+    if (dates && dates.startDate && dates.endDate) {
       urlSearchParams.append("startDate", dates.startDate)
       urlSearchParams.append("endDate", dates.endDate)
     }
@@ -55,10 +53,6 @@ export const StaySearch = () => {
   }
 
   useEffect(() => {
-    if (location.pathname !== "/stays") {
-      dispatch(setStays(null))
-    }
-
     if (location.pathname === "/") {
       setLayout("homepage")
     } else {
