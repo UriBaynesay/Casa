@@ -1,6 +1,7 @@
 const dbService = require("../../services/db.service")
 const logger = require("../../services/logger.service")
 const { uploadImages } = require("../../services/upload.service")
+const { getOrdersForDates } = require("../order/order.service")
 const ObjectId = require("mongodb").ObjectId
 
 const COLLECTION_NAME = "stay_db"
@@ -9,7 +10,16 @@ async function query(filterBy = {}) {
   try {
     const criteria = _buildCriteria(filterBy)
     const collection = await dbService.getCollection(COLLECTION_NAME)
-    const stays = await collection.find(criteria).toArray()
+    let stays = await collection.find(criteria).toArray()
+    if (filterBy.startDate && filterBy.endDate) {
+      const orders = await getOrdersForDates(
+        filterBy.startDate,
+        filterBy.endDate
+      )
+      stays = stays.filter(
+        (stay) => !orders.find((order) => stay._id === order.stayId)
+      )
+    }
     return stays
   } catch (err) {
     logger.error("cannot find stays", err)
@@ -117,7 +127,10 @@ async function addReview(by, stayId, txt) {
     }
     const stay = await getById(stayId)
     stay.reviews.push(review)
-    await update(stay._id, { reviews: [...stay.reviews], numOfReviews:stay.numOfReviews+1 })
+    await update(stay._id, {
+      reviews: [...stay.reviews],
+      numOfReviews: stay.numOfReviews + 1,
+    })
     return review
   } catch (err) {
     logger.error(`cannot add review to ${stay._id} `, err)
