@@ -11,6 +11,7 @@ export const StaySearch = () => {
   const [layout, setLayout] = useState(null)
   const [searchBy, setSearchBy] = useState({})
   const [openModal, setOpenModal] = useState(null)
+  const [dates, setDates] = useState()
   const location = useLocation()
   const dispatch = useDispatch()
   const navigate = useNavigate()
@@ -33,11 +34,24 @@ export const StaySearch = () => {
     // dispatch(setFilterBy(searchBy))
     // setSearchBy({})
     const urlSearchParams = new URLSearchParams()
-    for(const key in searchBy){
-      urlSearchParams.append(key,searchBy[key])
+    for (const key in searchBy) {
+      urlSearchParams.append(key, searchBy[key])
+    }
+    if (dates.startDate && dates.endDate) {
+      urlSearchParams.append("startDate", dates.startDate)
+      urlSearchParams.append("endDate", dates.endDate)
     }
     setOpenModal(null)
-    navigate("/stays?"+urlSearchParams.toString())
+    navigate("/stays?" + urlSearchParams.toString())
+  }
+
+  const onSetDates = (startDateStr, endDateStr) => {
+    const startDate = new Date(startDateStr)
+    const endDate = new Date(endDateStr)
+    if (startDate.getDate() === endDate.getDate()) return
+    const startDateStamp = startDate.getTime()
+    const endDateStamp = endDate.getTime()
+    setDates({ endDate: endDateStamp, startDate: startDateStamp })
   }
 
   useEffect(() => {
@@ -105,6 +119,7 @@ export const StaySearch = () => {
             modal={openModal}
             onSetFilter={onSetFilter}
             onCloseModal={onCloseModal}
+            onSetDates={onSetDates}
           />
         )}
       </div>
